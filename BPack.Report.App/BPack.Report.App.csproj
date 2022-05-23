@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A0B1863-AEE3-43D5-ADC8-A5ABA7B594A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BPack.Report.App</RootNamespace>
+    <AssemblyName>BPack.Report.App</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BPack.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BPack.Common.2.0.10\lib\net461\BPack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BPack.Model.Annotation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BPack.Common.2.0.10\lib\net461\BPack.Model.Annotation.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.1.UI, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Extensions, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\IShowReport.cs" />
+    <Compile Include="Common\PaperKind.cs" />
+    <Compile Include="Common\BarcodeFontType.cs" />
+    <Compile Include="DlvOrder\Models\DlvOrderDetailModel.cs" />
+    <Compile Include="DlvOrder\Models\DlvOrderModel.cs" />
+    <Compile Include="DlvOrder\Models\DlvOrderModelArgs.cs" />
+    <Compile Include="DlvOrder\Models\ReservedHuModel.cs" />
+    <Compile Include="DlvOrder\Pocket\DlvOrderPocket.cs" />
+    <Compile Include="DlvOrder\Reports\DlvOrderReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DlvOrder\Reports\DlvOrderReport.Designer.cs">
+      <DependentUpon>DlvOrderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EssInspection\Models\EssCellModel.cs" />
+    <Compile Include="EssInspection\Models\EssEolModel.cs" />
+    <Compile Include="EssInspection\Models\EssHousingModel.cs" />
+    <Compile Include="EssInspection\Models\EssInspectionModelArgs.cs" />
+    <Compile Include="EssInspection\Models\EssLotDetailModel.cs" />
+    <Compile Include="EssInspection\Models\EssLotHeaderModel.cs" />
+    <Compile Include="EssInspection\Pocket\EssInspectionPocket.cs" />
+    <Compile Include="EssInspection\Reports\EssInspectionDoc_New.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EssInspection\Reports\EssInspectionDoc_New.Designer.cs">
+      <DependentUpon>EssInspectionDoc_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EssInspection\Reports\EssInspectionDoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EssInspection\Reports\EssInspectionDoc.Designer.cs">
+      <DependentUpon>EssInspectionDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\DlvOrderReportFactory.cs" />
+    <Compile Include="Factory\Dy_HandlingUnit\Dy_HandlingUnitReportFactory.cs" />
+    <Compile Include="Factory\HandlingUnitReportFactory.cs" />
+    <Compile Include="Factory\HandlingUnitBarcodeCommands.cs" />
+    <Compile Include="Factory\EssInspectionReportFactory.cs" />
+    <Compile Include="Factory\MaterialRequestReportFactory.cs" />
+    <Compile Include="Factory\PurchaseOrderReportFactory.cs" />
+    <Compile Include="HandlingUnit\Models\DY_AMERIA\dy_LpackDetailModel.cs" />
+    <Compile Include="HandlingUnit\Models\DY_AMERIA\dy_LPackingHeaderModel.cs" />
+    <Compile Include="HandlingUnit\Models\DY_AMERIA\dy_LpackModel.cs" />
+    <Compile Include="HandlingUnit\Models\DY_AMERIA\dy_MPackingDetailModel.cs" />
+    <Compile Include="HandlingUnit\Models\DY_AMERIA\dy_MPackingHeaderModel.cs" />
+    <Compile Include="HandlingUnit\Models\HandlingUnitModelArgs.cs" />
+    <Compile Include="HandlingUnit\Models\HuSampleModel.cs" />
+    <Compile Include="HandlingUnit\Models\MappingBarcodeReportModel.cs" />
+    <Compile Include="HandlingUnit\Models\MatBarcodeReportModel.cs" />
+    <Compile Include="HandlingUnit\Models\MultiBarcodeReportModel.cs" />
+    <Compile Include="HandlingUnit\Models\NcrReturnReportDetailModel.cs" />
+    <Compile Include="HandlingUnit\Models\NcrReturnReportHeaderModel.cs" />
+    <Compile Include="HandlingUnit\Models\NcrReturnReportModel.cs" />
+    <Compile Include="HandlingUnit\Models\FmlTagReportModel.cs" />
+    <Compile Include="HandlingUnit\Models\NcrTagReportModel.cs" />
+    <Compile Include="HandlingUnit\Models\PalletProdBarcodeReportModel.cs" />
+    <Compile Include="HandlingUnit\Models\SerialGoodsBarcodeReportModel.cs" />
+    <Compile Include="HandlingUnit\Models\SerialSemiBarcodeReportModel.cs" />
+    <Compile Include="HandlingUnit\Pocket\HandlingUnitPocket.cs" />
+    <Compile Include="HandlingUnit\Reports\DY_AMERIA\Dy_LpackingReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\DY_AMERIA\Dy_LpackingReport.Designer.cs">
+      <DependentUpon>Dy_LpackingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\DY_AMERIA\Dy_LpackReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\DY_AMERIA\Dy_LpackReport.Designer.cs">
+      <DependentUpon>Dy_LpackReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\DY_AMERIA\Dy_MPackingReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\DY_AMERIA\Dy_MPackingReport.Designer.cs">
+      <DependentUpon>Dy_MPackingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\FmlTagReportA4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\FmlTagReportA4.Designer.cs">
+      <DependentUpon>FmlTagReportA4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\HuSampleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\HuSampleReport.Designer.cs">
+      <DependentUpon>HuSampleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\NcrTagReportA5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\NcrTagReportA5.Designer.cs">
+      <DependentUpon>NcrTagReportA5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\FmlTagReportA5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\FmlTagReportA5.Designer.cs">
+      <DependentUpon>FmlTagReportA5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\MappingBarcodeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\MappingBarcodeReport.Designer.cs">
+      <DependentUpon>MappingBarcodeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\MatBarcodeReportA4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\MatBarcodeReportA4.Designer.cs">
+      <DependentUpon>MatBarcodeReportA4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\MultiBarcodeReportA4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\MultiBarcodeReportA4.Designer.cs">
+      <DependentUpon>MultiBarcodeReportA4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\NcrReturnReportA4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\NcrReturnReportA4.Designer.cs">
+      <DependentUpon>NcrReturnReportA4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\NcrTagReportA4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\NcrTagReportA4.Designer.cs">
+      <DependentUpon>NcrTagReportA4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\MatBarcodeReportA5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\MatBarcodeReportA5.Designer.cs">
+      <DependentUpon>MatBarcodeReportA5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\PalletProdBarcodeReportA5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\PalletProdBarcodeReportA5.Designer.cs">
+      <DependentUpon>PalletProdBarcodeReportA5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\PalletProdBarcodeReportA4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\PalletProdBarcodeReportA4.Designer.cs">
+      <DependentUpon>PalletProdBarcodeReportA4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\MultiBarcodeReportA5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\MultiBarcodeReportA5.Designer.cs">
+      <DependentUpon>MultiBarcodeReportA5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\SerialGoodsBarcodeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\SerialGoodsBarcodeReport.Designer.cs">
+      <DependentUpon>SerialGoodsBarcodeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\SerialSemiBarcodeReport35x55.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\SerialSemiBarcodeReport35x55.Designer.cs">
+      <DependentUpon>SerialSemiBarcodeReport35x55.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\SerialSemiBarcodeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandlingUnit\Reports\SerialSemiBarcodeReport.Designer.cs">
+      <DependentUpon>SerialSemiBarcodeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialRequest\Models\MaterialRequestDetailModel.cs" />
+    <Compile Include="MaterialRequest\Models\MaterialRequestDocModelArgs.cs" />
+    <Compile Include="MaterialRequest\Models\MaterialRequestHeaderModel.cs" />
+    <Compile Include="MaterialRequest\Pocket\MaterialRequestDocPocket.cs" />
+    <Compile Include="MaterialRequest\Reports\MaterialRequestDoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialRequest\Reports\MaterialRequestDoc.Designer.cs">
+      <DependentUpon>MaterialRequestDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchseOrder\Models\PoItemModel.cs" />
+    <Compile Include="PurchseOrder\Models\PoModel.cs" />
+    <Compile Include="PurchseOrder\Models\PurchaseOrderModelArgs.cs" />
+    <Compile Include="PurchseOrder\Pocket\PurchaseOrderPocket.cs" />
+    <Compile Include="PurchseOrder\Reports\PurchaseOrderReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurchseOrder\Reports\PurchaseOrderReport.Designer.cs">
+      <DependentUpon>PurchaseOrderReport.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DlvOrder\Reports\DlvOrderReport.resx">
+      <DependentUpon>DlvOrderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EssInspection\Reports\EssInspectionDoc_New.resx">
+      <DependentUpon>EssInspectionDoc_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EssInspection\Reports\EssInspectionDoc.resx">
+      <DependentUpon>EssInspectionDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\DY_AMERIA\Dy_LpackingReport.resx">
+      <DependentUpon>Dy_LpackingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\DY_AMERIA\Dy_LpackReport.resx">
+      <DependentUpon>Dy_LpackReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\DY_AMERIA\Dy_MPackingReport.resx">
+      <DependentUpon>Dy_MPackingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\FmlTagReportA4.resx">
+      <DependentUpon>FmlTagReportA4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\HuSampleReport.resx">
+      <DependentUpon>HuSampleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\NcrTagReportA5.resx">
+      <DependentUpon>NcrTagReportA5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\FmlTagReportA5.resx">
+      <DependentUpon>FmlTagReportA5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\MappingBarcodeReport.resx">
+      <DependentUpon>MappingBarcodeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\MatBarcodeReportA4.resx">
+      <DependentUpon>MatBarcodeReportA4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\MultiBarcodeReportA4.resx">
+      <DependentUpon>MultiBarcodeReportA4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\NcrReturnReportA4.resx">
+      <DependentUpon>NcrReturnReportA4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\NcrTagReportA4.resx">
+      <DependentUpon>NcrTagReportA4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\MatBarcodeReportA5.resx">
+      <DependentUpon>MatBarcodeReportA5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\PalletProdBarcodeReportA5.resx">
+      <DependentUpon>PalletProdBarcodeReportA5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\PalletProdBarcodeReportA4.resx">
+      <DependentUpon>PalletProdBarcodeReportA4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\MultiBarcodeReportA5.resx">
+      <DependentUpon>MultiBarcodeReportA5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\SerialGoodsBarcodeReport.resx">
+      <DependentUpon>SerialGoodsBarcodeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\SerialSemiBarcodeReport35x55.resx">
+      <DependentUpon>SerialSemiBarcodeReport35x55.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlingUnit\Reports\SerialSemiBarcodeReport.resx">
+      <DependentUpon>SerialSemiBarcodeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialRequest\Reports\MaterialRequestDoc.resx">
+      <DependentUpon>MaterialRequestDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchseOrder\Reports\PurchaseOrderReport.resx">
+      <DependentUpon>PurchaseOrderReport.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\HMC.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KMC.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="Images\HMC.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <Content Include="Images\KMC.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

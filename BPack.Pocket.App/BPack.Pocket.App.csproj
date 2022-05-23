@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FE0D94D-0763-4AEF-9844-419F89F9A21B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BPack.Pocket.App</RootNamespace>
+    <AssemblyName>BPack.Pocket.App</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BPack.Run\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\BPack.Run\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BPack.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BPack.Common.2.0.10\lib\net461\BPack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BPack.Model.Annotation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BPack.Common.2.0.10\lib\net461\BPack.Model.Annotation.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CT\PjtAct\PjtActPocket.cs" />
+    <Compile Include="MD\BpaGate\BpaGatePocket.cs" />
+    <Compile Include="MD\BpaInfo\BpaInfoPocket.cs" />
+    <Compile Include="CT\ProjectManager\ProjectManagerPocket.cs" />
+    <Compile Include="MD\DlvGateLine\DlvGateLinePocket.cs" />
+    <Compile Include="MD\DlvJisInfo\DlvJisInfoPocket.cs" />
+    <Compile Include="MD\DlvLineCarType\DlvLineCarTypePocket.cs" />
+    <Compile Include="MD\EquInfo\EquInfoPocket.cs" />
+    <Compile Include="MD\EquItemCheckList\EquItemCheckListPocket.cs" />
+    <Compile Include="MD\EquWcEqu\EquWcEquPocekt.cs" />
+    <Compile Include="MD\GirType\GirTypePocket.cs" />
+    <Compile Include="MD\DlvJisTrtRule\DlvJisTrtRulePocket.cs" />
+    <Compile Include="MD\GirWareHouse\GirWareHousePocket.cs" />
+    <Compile Include="MD\ItmBomTree\ItmBomTreePocket.cs" />
+    <Compile Include="MD\ItmBom\ItmBomPocket.cs" />
+    <Compile Include="MD\ItmItemGroup\ItmItemGroupPocket.cs" />
+    <Compile Include="MD\ItmItemInfo\ItmItemInfoPocket.cs" />
+    <Compile Include="MD\ItmItemType\ItmItemTypePocket.cs" />
+    <Compile Include="MD\ItmPurchase\ItmPurchasePocket.cs" />
+    <Compile Include="MD\ItmSales\ItmSalesPocket.cs" />
+    <Compile Include="MD\MolInfo\MolInfoPocket.cs" />
+    <Compile Include="MD\MolItem\MolItemPocket.cs" />
+    <Compile Include="MD\OrgComp\OrgCompPocket.cs" />
+    <Compile Include="MD\OrgDept\OrgDeptPocket.cs" />
+    <Compile Include="MD\OrgPlant\OrgPlantPocket.cs" />
+    <Compile Include="MD\OrgUser\OrgUserPocket.cs" />
+    <Compile Include="MD\PrdCalendar\PrdCalendarPocket.cs" />
+    <Compile Include="MD\PrdCaln\PrdCalnPocket.cs" />
+    <Compile Include="MD\PrdHoliday\PrdHolidayPocket.cs" />
+    <Compile Include="MD\PrdNonOper\PrdNonOperPocket.cs" />
+    <Compile Include="MD\PrdRouting\PrdRoutingPocket.cs" />
+    <Compile Include="MD\PrdShiftOper\PrdShiftOperPocket.cs" />
+    <Compile Include="MD\PrdShift\PrdShiftPocket.cs" />
+    <Compile Include="MD\PrdStdRouting\PrdStdRoutingPocket.cs" />
+    <Compile Include="MD\PrdWcOper\PrdWcOperPocket.cs" />
+    <Compile Include="MD\PrdWorkCenter\PrdWorkCenterPocket.cs" />
+    <Compile Include="MD\QciChkList\QciChkListPocket.cs" />
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupPocket.cs" />
+    <Compile Include="MD\QciInspStd\QciInspStdPocket.cs" />
+    <Compile Include="MD\QciInspStd_dy\QciInspStdPocket.cs" />
+    <Compile Include="MD\QciNcr\QciNcrPocket.cs" />
+    <Compile Include="MD\SomDevice\SomDevicePocket.cs" />
+    <Compile Include="MD\WcWorkTime\WcWorkTimePocket.cs" />
+    <Compile Include="MI\CommonCodeManager\CommonCodeManagerPocketWebApi.cs" />
+    <Compile Include="MI\CommonCodeManager\CommonCodeManagerPocket.cs" />
+    <Compile Include="MI\UserInfo\UserInfoPocket.cs" />
+    <Compile Include="MI\UserInfo\UserInfoPocketWebApi.cs" />
+    <Compile Include="MM\GirClose\GirClosePocket.cs" />
+    <Compile Include="MM\GirEtc\GirEtcPocket.cs" />
+    <Compile Include="MM\GirHist\GirHistPocket.cs" />
+    <Compile Include="MM\GirInv\GirInvPocket.cs" />
+    <Compile Include="MM\GirLocHist\GirLocHistPocket.cs" />
+    <Compile Include="MM\GirLocStock\GirLocStockPocket.cs" />
+    <Compile Include="MM\GirStock\GirStockPocket.cs" />
+    <Compile Include="MM\GirTotalGirType\GirTotalGirTypePocket.cs" />
+    <Compile Include="MM\HumEmptyLabel\HumEmptyLabelPocket.cs" />
+    <Compile Include="MM\HumLotTracking\HumLotTrackingPocket.cs" />
+    <Compile Include="MM\HumHuMaster\HumHuMasterPocket.cs" />
+    <Compile Include="MM\HumLocInfo\HumLocInfoPocket.cs" />
+    <Compile Include="MM\HumMebBarcode\HumMebBarcodePocket.cs" />
+    <Compile Include="MM\InpMatHist\InpMatHistPocket.cs" />
+    <Compile Include="MM\InvAdjust\InvAdjustPocket.cs" />
+    <Compile Include="MM\InvAmount\InvAmountPocket.cs" />
+    <Compile Include="MM\InvoiceStatus\InvoiceStatusPocket.cs" />
+    <Compile Include="MM\InvOrder\InvOrderPocket.cs" />
+    <Compile Include="MM\MebLot\MebLotPocket.cs" />
+    <Compile Include="MM\MovDocConfirm\MovDocConfirmPocket.cs" />
+    <Compile Include="MM\MovDoc\MovDocPocket.cs" />
+    <Compile Include="MM\MovLoc\MovLocPocket.cs" />
+    <Compile Include="MM\PurInboundHist\PurInboundHistPocket.cs" />
+    <Compile Include="MM\PurInbound\PurInboundPocket.cs" />
+    <Compile Include="MM\GirTotalStock\TotalStockPocket.cs" />
+    <Compile Include="PC\MaterialRequest\MrqhPocket.cs" />
+    <Compile Include="PC\NwtStatusInfo\NwtStatusInfoPocket.cs" />
+    <Compile Include="PC\OperationDayPlan\DayPocket.cs" />
+    <Compile Include="PC\OperationMonthPlan\MonthPocket.cs" />
+    <Compile Include="PC\OperationWeekPlan\WeekPocket.cs" />
+    <Compile Include="PC\WoeBadRsPivot\WoeBadRsPivotPocket.cs" />
+    <Compile Include="PC\WoeEssLot\EssLotPocket.cs" />
+    <Compile Include="PC\WoeNwRsPivot\WoeNwRsPivotPocket.cs" />
+    <Compile Include="PC\WoeResultBatch\WoeResultBatchPocket.cs" />
+    <Compile Include="PC\WoeResultPivot\WoeResultPivotPocket.cs" />
+    <Compile Include="PC\WoeResult\WoeResultPocket.cs" />
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoPocket.cs" />
+    <Compile Include="PC\WoeRsPivotDayPlan\WoeRsPivotDayPlanPocket.cs" />
+    <Compile Include="PC\WoeRsPivotYearPlan\WoeRsPivotYearPlanPocket.cs" />
+    <Compile Include="PC\WoeRsPivot\WoeRsPivotPocket.cs" />
+    <Compile Include="PC\WorkOrder\WorkOrderPocket.cs" />
+    <Compile Include="PC\WorOrderHuLabel\WorOrderHuLabelPocket.cs" />
+    <Compile Include="PC\WorOrderRead\WorOrderReadPocket.cs" />
+    <Compile Include="PC\WorOrderVsMat\WorOrderVsMatPocket.cs" />
+    <Compile Include="PC\WorWorkOrder\WorWorkOrderPocket.cs" />
+    <Compile Include="PO\Mrp\MrpPocket.cs" />
+    <Compile Include="PO\PurOrderInp\PurOrderInpPocket.cs" />
+    <Compile Include="PO\PurOrder\PurOrderPocket.cs" />
+    <Compile Include="PO\PurPack\PurPackPocket.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QC\AppLine\AppLinePocket.cs" />
+    <Compile Include="QC\AppHist\AppHistPocket.cs" />
+    <Compile Include="QC\IqcInsp\IqcInspPocket.cs" />
+    <Compile Include="QC\NcrHist\NcrHistPocket.cs" />
+    <Compile Include="QC\NcrRegJudg\NcrRegJudgePocket.cs" />
+    <Compile Include="QC\NcrReg\NcrRegPocket.cs" />
+    <Compile Include="QC\QchDlvRead\QchDlvReadPocket.cs" />
+    <Compile Include="QC\QchNcrRegRead\QchNcrRegReadPocket.cs" />
+    <Compile Include="QC\QchPatroRead\QchPatrolReadPocket.cs" />
+    <Compile Include="QC\QchFinalRead\QchFinalReadPocket.cs" />
+    <Compile Include="QC\QchFmlRead\QchFmlReadPocket.cs" />
+    <Compile Include="SD\CiqDlvClose\CiqDlvClosePocket.cs" />
+    <Compile Include="SD\DlvConfirm2\DlvConfirm2Pocket.cs" />
+    <Compile Include="SD\DlvHist\DlvHistPocket.cs" />
+    <Compile Include="SD\DlvOrderHist\DlvOrderHistPocket.cs" />
+    <Compile Include="SD\DlvOrderVsResult\DlvOrderVsResultPocket.cs" />
+    <Compile Include="SD\DlvOrder\DlvOrderPocket.cs" />
+    <Compile Include="SD\DlvPlan\DlvPlanPocket.cs" />
+    <Compile Include="SD\JisDetailSum\JisDetailSumPocket.cs" />
+    <Compile Include="SD\DlvConfirm\DlvConfirmPocket.cs" />
+    <Compile Include="SD\SalesOrderHist\SalesOrderHistPocket.cs" />
+    <Compile Include="SD\SalesOrder\SalesOrderPocket.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BPack.Model.App\BPack.Model.App.csproj">
+      <Project>{AE01107E-5D54-4744-814F-958066C0FAE1}</Project>
+      <Name>BPack.Model.App</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

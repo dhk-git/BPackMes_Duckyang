@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE01107E-5D54-4744-814F-958066C0FAE1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BPack.Model.App</RootNamespace>
+    <AssemblyName>BPack.Model.App</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BPack.Run\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\BPack.Run\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BPack.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BPack.Common.2.0.10\lib\net461\BPack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BPack.Model.Annotation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BPack.Common.2.0.10\lib\net461\BPack.Model.Annotation.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CT\PjtAct\PjtActModel.cs" />
+    <Compile Include="CT\PjtAct\PjtActModelArgs.cs" />
+    <Compile Include="CT\ProjectManager\ProjectDetailUploadModel.cs" />
+    <Compile Include="MD\BpaGate\BpaGateModelArgs.cs" />
+    <Compile Include="MD\BpaGate\BparModel.cs" />
+    <Compile Include="MD\BpaGate\GateModel.cs" />
+    <Compile Include="MD\BpaInfo\BpaInfoModelArgs.cs" />
+    <Compile Include="MD\BpaInfo\ContModel.cs" />
+    <Compile Include="MD\BpaInfo\BparModel.cs" />
+    <Compile Include="CT\ProjectManager\ProjectActivityModel.cs" />
+    <Compile Include="CT\ProjectManager\ProjectDetailModel.cs" />
+    <Compile Include="CT\ProjectManager\ProjectHeaderModel.cs" />
+    <Compile Include="CT\ProjectManager\ProjectManagerModelArgs.cs" />
+    <Compile Include="CT\ProjectManager\ProjectMemberModel.cs" />
+    <Compile Include="MD\DlvGateLine\DlvGateLineModelArgs.cs" />
+    <Compile Include="MD\DlvGateLine\DlvGateLineGateModel.cs" />
+    <Compile Include="MD\DlvGateLine\DlvGateLinePartnerModel.cs" />
+    <Compile Include="MD\DlvJisInfo\DlvJisInfoJISModel.cs" />
+    <Compile Include="MD\DlvJisInfo\DlvJisInfoModelArgs.cs" />
+    <Compile Include="MD\DlvJisInfo\DlvJisInfoGateModel.cs" />
+    <Compile Include="MD\DlvLineCarType\DlvLineCarTypeGateModel.cs" />
+    <Compile Include="MD\DlvLineCarType\DlvLineCarTypeModel.cs" />
+    <Compile Include="MD\DlvLineCarType\DlvLineCarTypeModelArgs.cs" />
+    <Compile Include="MD\EquInfo\EquInfoEquipModel.cs" />
+    <Compile Include="MD\EquInfo\EquInfoCheckModel.cs" />
+    <Compile Include="MD\EquInfo\EquInfoModelArgs.cs" />
+    <Compile Include="MD\EquItemCheckList\EquItemCheckListCheckListModel.cs" />
+    <Compile Include="MD\EquItemCheckList\EquItemCheckListEquipModel.cs" />
+    <Compile Include="MD\EquItemCheckList\EquItemCheckListItemModel.cs" />
+    <Compile Include="MD\EquItemCheckList\EquItemCheckListModelArgs.cs" />
+    <Compile Include="MD\EquWcEqu\EquWcEquModelArgs.cs" />
+    <Compile Include="MD\GirType\TypeModel.cs" />
+    <Compile Include="MD\GirType\GirTypeModelArgs.cs" />
+    <Compile Include="MD\DlvJisTrtRule\DlvJisTrtRuleModelArgs.cs" />
+    <Compile Include="MD\DlvJisTrtRule\DlvJisTrtRuleDetailModel.cs" />
+    <Compile Include="MD\DlvJisTrtRule\DlvJisTrtRuleHeaderModel.cs" />
+    <Compile Include="MD\GirWareHouse\GirWareHouseModelArgs.cs" />
+    <Compile Include="MD\GirWareHouse\LocationModel.cs" />
+    <Compile Include="MD\GirWareHouse\LocBarcodeModel.cs" />
+    <Compile Include="MD\GirWareHouse\WareHouseModel.cs" />
+    <Compile Include="MD\ItmBomTree\BomTreeReverseModel.cs" />
+    <Compile Include="MD\ItmBomTree\BomTreeModel.cs" />
+    <Compile Include="MD\ItmBomTree\ItemBomModel.cs" />
+    <Compile Include="MD\ItmBomTree\ItmBomTreeModelArgs.cs" />
+    <Compile Include="MD\ItmBom\BomCopyModel.cs" />
+    <Compile Include="MD\ItmBom\BomDetailModel.cs" />
+    <Compile Include="MD\ItmBom\BomHeaderModel.cs" />
+    <Compile Include="MD\ItmBom\ItemInfoModel.cs" />
+    <Compile Include="MD\ItmBom\ItmBomModelArgs.cs" />
+    <Compile Include="MD\ItmItemGroup\ItemGroupModel.cs" />
+    <Compile Include="MD\ItmItemGroup\ItmItemGroupModelArgs.cs" />
+    <Compile Include="MD\ItmItemInfo\ItemConvModel.cs" />
+    <Compile Include="MD\ItmItemInfo\ItemInfoModel.cs" />
+    <Compile Include="MD\ItmItemInfo\ItmItemInfoModelArgs.cs" />
+    <Compile Include="MD\ItmItemType\ItemTypeItemModel.cs" />
+    <Compile Include="MD\ItmItemType\ItemTypeModel.cs" />
+    <Compile Include="MD\ItmItemType\ItmItemTypeModelArgs.cs" />
+    <Compile Include="MD\ItmPurchase\ItmPurchaseModelArgs.cs" />
+    <Compile Include="MD\ItmPurchase\ItmListModel.cs" />
+    <Compile Include="MD\ItmPurchase\ItmPurchaseModel.cs" />
+    <Compile Include="MD\ItmSales\ItmSalesItemModel.cs" />
+    <Compile Include="MD\ItmSales\ItmSalesGateModel.cs" />
+    <Compile Include="MD\ItmSales\ItmSalesModelArgs.cs" />
+    <Compile Include="MD\MolInfo\MolInfoModelArgs.cs" />
+    <Compile Include="MD\MolInfo\MoldListModel.cs" />
+    <Compile Include="MD\MolItem\ItemListModel.cs" />
+    <Compile Include="MD\MolItem\MoldListModel.cs" />
+    <Compile Include="MD\MolItem\MolItemModelArgs.cs" />
+    <Compile Include="MD\OrgComp\OrgCompModelArgs.cs" />
+    <Compile Include="MD\OrgComp\CompModel.cs" />
+    <Compile Include="MD\OrgDept\CompModel.cs" />
+    <Compile Include="MD\OrgDept\DeptModel.cs" />
+    <Compile Include="MD\OrgDept\OrgDeptModelArgs.cs" />
+    <Compile Include="MD\OrgPlant\CompModel.cs" />
+    <Compile Include="MD\OrgPlant\OrgPlantModelArgs.cs" />
+    <Compile Include="MD\OrgPlant\PlantModel.cs" />
+    <Compile Include="MD\OrgPlant\PlantWkModel.cs" />
+    <Compile Include="MD\OrgUser\DeptModel.cs" />
+    <Compile Include="MD\OrgUser\OrgUserModelArgs.cs" />
+    <Compile Include="MD\OrgUser\UserModel.cs" />
+    <Compile Include="MD\PrdCalendar\CalendarModel.cs" />
+    <Compile Include="MD\PrdCalendar\PrdCalendarModelArgs.cs" />
+    <Compile Include="MD\PrdCaln\CalnCreateModel.cs" />
+    <Compile Include="MD\PrdCaln\CalnModel.cs" />
+    <Compile Include="MD\PrdCaln\PrdCalnModelArgs.cs" />
+    <Compile Include="MD\PrdHoliday\HolidayCopyModel.cs" />
+    <Compile Include="MD\PrdHoliday\HolidayModel.cs" />
+    <Compile Include="MD\PrdHoliday\PrdHolidayModelArgs.cs" />
+    <Compile Include="MD\PrdNonOper\NonOperGroupModel.cs" />
+    <Compile Include="MD\PrdNonOper\NonOperModel.cs" />
+    <Compile Include="MD\PrdNonOper\PrdNonOperModelArgs.cs" />
+    <Compile Include="MD\PrdRouting\BomDetailModel.cs" />
+    <Compile Include="MD\PrdRouting\BomHeaderModel.cs" />
+    <Compile Include="MD\PrdRouting\PrdRoutingSelectedEventArgs.cs" />
+    <Compile Include="MD\PrdRouting\MaterialModel.cs" />
+    <Compile Include="MD\PrdRouting\OperationModel.cs" />
+    <Compile Include="MD\PrdRouting\PrdRoutingModelArgs.cs" />
+    <Compile Include="MD\PrdRouting\RoutingModel.cs" />
+    <Compile Include="MD\PrdShiftOper\ShiftModel.cs" />
+    <Compile Include="MD\PrdShiftOper\ShiftOperModel.cs" />
+    <Compile Include="MD\PrdShiftOper\PrdShiftOperModelArgs.cs" />
+    <Compile Include="MD\PrdShift\ShiftDetailGroupModel.cs" />
+    <Compile Include="MD\PrdShift\ShiftGroupModel.cs" />
+    <Compile Include="MD\PrdShift\PrdShiftModelArgs.cs" />
+    <Compile Include="MD\PrdShift\ShiftModel.cs" />
+    <Compile Include="MD\PrdStdRouting\PrdStdRoutingModelArgs.cs" />
+    <Compile Include="MD\PrdStdRouting\StdRoutingDetailModel.cs" />
+    <Compile Include="MD\PrdStdRouting\StdRoutingModel.cs" />
+    <Compile Include="MD\PrdWcOper\PrdWcOperModelArgs.cs" />
+    <Compile Include="MD\PrdWcOper\PrdWcOperWorkCenterModel.cs" />
+    <Compile Include="MD\PrdWcOper\PrdWcOperOperatorModel.cs" />
+    <Compile Include="MD\PrdWorkCenter\WorkCenterItemModel.cs" />
+    <Compile Include="MD\PrdWorkCenter\WorkCenterOPModel.cs" />
+    <Compile Include="MD\PrdWorkCenter\PlantModel.cs" />
+    <Compile Include="MD\PrdWorkCenter\PrdWorkCenterModelArgs.cs" />
+    <Compile Include="MD\PrdWorkCenter\EquipModel.cs" />
+    <Compile Include="MD\PrdWorkCenter\WorkCenterModel.cs" />
+    <Compile Include="MD\QciChkList\CheckListModel.cs" />
+    <Compile Include="MD\QciChkList\QciChkListModelArgs.cs" />
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupItemModel.cs" />
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupModel.cs" />
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupModelArgs.cs" />
+    <Compile Include="MD\QciInspStd\InspectionRevisionModel.cs" />
+    <Compile Include="MD\QciInspStd\InspectionCheckLIstModel.cs" />
+    <Compile Include="MD\QciInspStd\InspectionStandardModel.cs" />
+    <Compile Include="MD\QciInspStd\ItemModel.cs" />
+    <Compile Include="MD\QciInspStd\QciInspStdModelArgs.cs" />
+    <Compile Include="MD\QciInspStd_dy\QciInspStd_dyModelArgs.cs" />
+    <Compile Include="MD\QciInspStd_dy\QciLinspStdHeaderModel.cs" />
+    <Compile Include="MD\QciNcr\QciNcrTypeModel.cs" />
+    <Compile Include="MD\QciNcr\QciNcrCodeModel.cs" />
+    <Compile Include="MD\QciNcr\QciNcrModelArgs.cs" />
+    <Compile Include="MD\SomDevice\DeviceModel.cs" />
+    <Compile Include="MD\SomDevice\ModeModel.cs" />
+    <Compile Include="MD\SomDevice\PlcInfoModel.cs" />
+    <Compile Include="MD\SomDevice\SettingModel.cs" />
+    <Compile Include="MD\SomDevice\SomDeviceModelArgs.cs" />
+    <Compile Include="MD\WcWorkTime\WcWorkTimeModelArgs.cs" />
+    <Compile Include="MD\WcWorkTime\WcWorkTimeWorkCenterModel.cs" />
+    <Compile Include="MD\WcWorkTime\WcWorkTimeWorkTimeModel.cs" />
+    <Compile Include="MI\CommonCodeManager\ChildCodeModel.cs" />
+    <Compile Include="MI\CommonCodeManager\CommonCodeManagerModelArgs.cs" />
+    <Compile Include="MI\CommonCodeManager\ParentCodeModel.cs" />
+    <Compile Include="MI\UserInfo\UserInfoModel.cs" />
+    <Compile Include="MI\UserInfo\UserInfoModelArgs.cs" />
+    <Compile Include="MM\GirClose\CloseDateModel.cs" />
+    <Compile Include="MM\GirClose\CloseLocModel.cs" />
+    <Compile Include="MM\GirClose\CloseGirTypeModel.cs" />
+    <Compile Include="MM\GirClose\CloseWhModel.cs" />
+    <Compile Include="MM\GirClose\GirCloseModelArgs.cs" />
+    <Compile Include="MM\GirEtc\GirEtcItemModel.cs" />
+    <Compile Include="MM\GirEtc\GirEtcModelArgs.cs" />
+    <Compile Include="MM\GirEtc\GirEtcModel.cs" />
+    <Compile Include="MM\GirHist\GirHistModel.cs" />
+    <Compile Include="MM\GirHist\GirHistModelArgs.cs" />
+    <Compile Include="MM\GirInv\GirInvModelArgs.cs" />
+    <Compile Include="MM\GirInv\InvDetailModel.cs" />
+    <Compile Include="MM\GirInv\InvModel.cs" />
+    <Compile Include="MM\GirInv\StockModel.cs" />
+    <Compile Include="MM\GirLocHist\GirLocInModel.cs" />
+    <Compile Include="MM\GirLocHist\GirLocHistModelArgs.cs" />
+    <Compile Include="MM\GirLocHist\GirLocOutModel.cs" />
+    <Compile Include="MM\GirLocStock\LocGirModel.cs" />
+    <Compile Include="MM\GirLocStock\GirLocStockModelArgs.cs" />
+    <Compile Include="MM\GirLocStock\LocHuModel.cs" />
+    <Compile Include="MM\GirLocStock\LocStockModel.cs" />
+    <Compile Include="MM\GirStock\GirModel.cs" />
+    <Compile Include="MM\GirStock\GirStockModelArgs.cs" />
+    <Compile Include="MM\GirStock\StockModel.cs" />
+    <Compile Include="MM\GirStock\WhHuModel.cs" />
+    <Compile Include="MM\GirTotalGirType\GirTotalGirTypeModelArgs.cs" />
+    <Compile Include="MM\GirTotalStock\LocStockModel.cs" />
+    <Compile Include="MM\HumLotTracking\HumDetailReverseModel.cs" />
+    <Compile Include="MM\HumLotTracking\HumDetailForwardModel.cs" />
+    <Compile Include="MM\HumLotTracking\HumHeaderForwardModel.cs" />
+    <Compile Include="MM\HumLotTracking\HumHeaderReverseModel.cs" />
+    <Compile Include="MM\HumLotTracking\HumLotTrackingModelArgs.cs" />
+    <Compile Include="MM\HumEmptyLabel\BarcodeModel.cs" />
+    <Compile Include="MM\HumEmptyLabel\CreatedBarcodeModel.cs" />
+    <Compile Include="MM\HumEmptyLabel\CreateMultiBarcodeModel.cs" />
+    <Compile Include="MM\HumEmptyLabel\CreatingBarcodeModel.cs" />
+    <Compile Include="MM\HumEmptyLabel\HumEmptyLabelModelArgs.cs" />
+    <Compile Include="MM\HumHuMaster\HumHuMasterModelArgs.cs" />
+    <Compile Include="MM\HumHuMaster\HuModel.cs" />
+    <Compile Include="MM\HumLocInfo\HumLocInfoModelArgs.cs" />
+    <Compile Include="MM\HumLocInfo\HumLocInfoModel.cs" />
+    <Compile Include="MM\HumMebBarcode\HumMebBarcodeModel.cs" />
+    <Compile Include="MM\HumMebBarcode\HumMebBarcodeModelArgs.cs" />
+    <Compile Include="MM\HumMebBarcode\HumMebBarcodeNewArgs.cs" />
+    <Compile Include="MM\InpMatHist\InpMatHistDetailModel.cs" />
+    <Compile Include="MM\InpMatHist\InpMatHistModelArgs.cs" />
+    <Compile Include="MM\InpMatHist\InpMatHistHeaderModel.cs" />
+    <Compile Include="MM\InvAdjust\InvAdjAddResultLikeLogiModel.cs" />
+    <Compile Include="MM\InvAdjust\InvAdjDetailModel.cs" />
+    <Compile Include="MM\InvAdjust\InvAdjHuModel.cs" />
+    <Compile Include="MM\InvAdjust\InvAdjItemModel.cs" />
+    <Compile Include="MM\InvAdjust\InvAdjOrderModel.cs" />
+    <Compile Include="MM\InvAdjust\InvAdjustModelArgs.cs" />
+    <Compile Include="MM\InvAmount\InvAmountModel.cs" />
+    <Compile Include="MM\InvAmount\InvAmountModelArgs.cs" />
+    <Compile Include="MM\InvoiceStatus\InvoiceStatusHeaderModel.cs" />
+    <Compile Include="MM\InvoiceStatus\InvoiceStatusModelArgs.cs" />
+    <Compile Include="MM\InvOrder\InvDetailModel.cs" />
+    <Compile Include="MM\InvOrder\InvHuModel.cs" />
+    <Compile Include="MM\InvOrder\InvItemModel.cs" />
+    <Compile Include="MM\InvOrder\InvOrderModel.cs" />
+    <Compile Include="MM\InvOrder\InvOrderModelArgs.cs" />
+    <Compile Include="MM\MebLot\LPackAndMPackModel.cs" />
+    <Compile Include="MM\MebLot\MebLotModelArgs.cs" />
+    <Compile Include="MM\MebLot\MPackAndPartLotModel.cs" />
+    <Compile Include="MM\MebLot\PackModel.cs" />
+    <Compile Include="MM\MovDocConfirm\MovDocConfirmModelArgs.cs" />
+    <Compile Include="MM\MovDocConfirm\MovDocModel.cs" />
+    <Compile Include="MM\MovDocConfirm\MovDocReportModel.cs" />
+    <Compile Include="MM\MovDocConfirm\MovHuReportModel.cs" />
+    <Compile Include="MM\MovDocConfirm\MovItemReportModel.cs" />
+    <Compile Include="MM\MovDoc\MovDocModel.cs" />
+    <Compile Include="MM\MovDoc\MovDocModelArgs.cs" />
+    <Compile Include="MM\MovDoc\MoveLocConfrimModel.cs" />
+    <Compile Include="MM\MovDoc\MovHuModel.cs" />
+    <Compile Include="MM\MovDoc\MovItemModel.cs" />
+    <Compile Include="MM\MovLoc\MovLocItemModel.cs" />
+    <Compile Include="MM\MovLoc\MovLocModel.cs" />
+    <Compile Include="MM\MovLoc\MovLocModelArgs.cs" />
+    <Compile Include="MM\PurInboundHist\PurInboundHistModel.cs" />
+    <Compile Include="MM\PurInboundHist\PurInboundHistModelArgs.cs" />
+    <Compile Include="MM\PurInbound\ConfirmInHeaderModel.cs" />
+    <Compile Include="MM\PurInbound\InDetailModel.cs" />
+    <Compile Include="MM\PurInbound\InHeaderModel.cs" />
+    <Compile Include="MM\PurInbound\InHuModel.cs" />
+    <Compile Include="MM\PurInbound\InHuHeaderModel.cs" />
+    <Compile Include="MM\PurInbound\InHuProcessModel.cs" />
+    <Compile Include="MM\PurInbound\PurInboundModelArgs.cs" />
+    <Compile Include="MM\GirTotalStock\GirTotalStockModelArgs.cs" />
+    <Compile Include="MM\PurInbound\PurPackModel.cs" />
+    <Compile Include="PC\MaterialRequest\MaterialRequestModelArgs.cs" />
+    <Compile Include="PC\MaterialRequest\MrqdHuListModel.cs" />
+    <Compile Include="PC\MaterialRequest\MrqdListModel.cs" />
+    <Compile Include="PC\MaterialRequest\MrqhListModel.cs" />
+    <Compile Include="PC\NwtStatusInfo\NwtStatusInfoListModel.cs" />
+    <Compile Include="PC\NwtStatusInfo\NwtStatusInfoModel.cs" />
+    <Compile Include="PC\NwtStatusInfo\NwtStatusInfoModelArgs.cs" />
+    <Compile Include="PC\OperationDayPlan\DayConfirmModel.cs" />
+    <Compile Include="PC\OperationDayPlan\DayPlanGrModel.cs" />
+    <Compile Include="PC\OperationDayPlan\DayPlanModel.cs" />
+    <Compile Include="PC\OperationDayPlan\DayPlanSumModel.cs" />
+    <Compile Include="PC\OperationDayPlan\DayPlanWeek.cs" />
+    <Compile Include="PC\OperationDayPlan\OperationDayPlanModelArgs.cs" />
+    <Compile Include="PC\OperationMonthPlan\MonthItemModel.cs" />
+    <Compile Include="PC\OperationMonthPlan\MonthPlan.cs" />
+    <Compile Include="PC\OperationMonthPlan\MonthPlanGrModel.cs" />
+    <Compile Include="PC\OperationMonthPlan\OperationMonthPlanModelArgs.cs" />
+    <Compile Include="PC\OperationWeekPlan\OperationWeekPlanModelArgs.cs" />
+    <Compile Include="PC\OperationWeekPlan\WeekConfirmModel.cs" />
+    <Compile Include="PC\OperationWeekPlan\WeekItemMasterModel.cs" />
+    <Compile Include="PC\OperationWeekPlan\WeekItemModel.cs" />
+    <Compile Include="PC\OperationWeekPlan\WeekPlanModel.cs" />
+    <Compile Include="PC\OperationWeekPlan\WeekPlanGrModel.cs" />
+    <Compile Include="PC\OperationWeekPlan\WeekPlanSumModel.cs" />
+    <Compile Include="PC\WoeBadRsPivot\BadRsPivotBadModel.cs" />
+    <Compile Include="PC\WoeBadRsPivot\BadRsPivotModel.cs" />
+    <Compile Include="PC\WoeBadRsPivot\WoeBadRsPivotModelArgs.cs" />
+    <Compile Include="PC\WoeEssLot\WoeEssLotModelArgs.cs" />
+    <Compile Include="PC\WoeEssLot\WoeEssTreeModel.cs" />
+    <Compile Include="PC\WoeNwRsPivot\NwRsPivotModel.cs" />
+    <Compile Include="PC\WoeNwRsPivot\NwRsPivotNotworkModel.cs" />
+    <Compile Include="PC\WoeNwRsPivot\WoeNwRsPivotModelArgs.cs" />
+    <Compile Include="PC\WoeResultBatch\WoeResultBatchBpModel.cs" />
+    <Compile Include="PC\WoeResultBatch\WoeResultBatchMatModel.cs" />
+    <Compile Include="PC\WoeResultBatch\WoeResultBatchModelArgs.cs" />
+    <Compile Include="PC\WoeResultBatch\WoeResultBatchResultModel.cs" />
+    <Compile Include="PC\WoeResultBatch\WoeResultBatchWorkOrderModel.cs" />
+    <Compile Include="PC\WoeResultPivot\ResultEachModel.cs" />
+    <Compile Include="PC\WoeResultPivot\ResultPivotModel.cs" />
+    <Compile Include="PC\WoeResultPivot\WoeResultPivotModelArgs.cs" />
+    <Compile Include="PC\WoeResult\WoeAddHuBpModel.cs" />
+    <Compile Include="PC\WoeResult\WoeAddParentHuBpModel.cs" />
+    <Compile Include="PC\WoeResult\WoeHuModel.cs" />
+    <Compile Include="PC\WoeResult\WoeOrderMaterialModel.cs" />
+    <Compile Include="PC\WoeResult\WoeParentHuModel.cs" />
+    <Compile Include="PC\WoeResult\WoeResultModelArgs.cs" />
+    <Compile Include="PC\WoeResult\WoeUsedMaterialBpModel.cs" />
+    <Compile Include="PC\WoeResult\WoeUsedMaterialModel.cs" />
+    <Compile Include="PC\WoeResult\WoeWorkOrderModel.cs" />
+    <Compile Include="PC\WoeResult\WoeWorkResultCloseModel.cs" />
+    <Compile Include="PC\WoeResult\WoeWorkResultModel.cs" />
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoRsModel.cs" />
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoHuModel.cs" />
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoModel.cs" />
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoModelArgs.cs" />
+    <Compile Include="PC\WoeRsltInfo\WorkResultModel.cs" />
+    <Compile Include="PC\WoeRsPivotDayPlan\RsPivotDayPlanModel.cs" />
+    <Compile Include="PC\WoeRsPivotDayPlan\WoeRsPivotDayPlanModelArgs.cs" />
+    <Compile Include="PC\WoeRsPivotYearPlan\WoeRsPivotYearPlanModelArgs.cs" />
+    <Compile Include="PC\WoeRsPivotYearPlan\YearPlanGrModel.cs" />
+    <Compile Include="PC\WoeRsPivot\RsBatchModel.cs" />
+    <Compile Include="PC\WoeRsPivot\RsPivotModel.cs" />
+    <Compile Include="PC\WoeRsPivot\WoeRsPivotModelArgs.cs" />
+    <Compile Include="PC\WorkOrder\RouteMtrlModel.cs" />
+    <Compile Include="PC\WorkOrder\WorkOrderBomDModel.cs" />
+    <Compile Include="PC\WorkOrder\WorkOrderBomModel.cs" />
+    <Compile Include="PC\WorkOrder\WorkOrderModel.cs" />
+    <Compile Include="PC\WorkOrder\WorkOrderModelArgs.cs" />
+    <Compile Include="PC\WorOrderHuLabel\WorOrderHuLabelCreatedBarcodeModel.cs" />
+    <Compile Include="PC\WorOrderHuLabel\WorOrderHuLabelCreatingBarcodeModel.cs" />
+    <Compile Include="PC\WorOrderHuLabel\WorOrderHuLabelSerialDetailModel.cs" />
+    <Compile Include="PC\WorOrderHuLabel\WorOrderHuLabelPalletDetailModel.cs" />
+    <Compile Include="PC\WorOrderHuLabel\WorOrderHuLabelSerialHeaderModel.cs" />
+    <Compile Include="PC\WorOrderHuLabel\WorOrderHuLabelModelArgs.cs" />
+    <Compile Include="PC\WorOrderHuLabel\WorOrderHuLabelPalletHeaderModel.cs" />
+    <Compile Include="PC\WorOrderRead\WorOrderReadHeaderModel.cs" />
+    <Compile Include="PC\WorOrderRead\WorOrderReadModelArgs.cs" />
+    <Compile Include="PC\WorOrderVsMat\WorOrderVsMatWorkOrderModel.cs" />
+    <Compile Include="PC\WorOrderVsMat\WorOrderVsMatMaterialModel.cs" />
+    <Compile Include="PC\WorOrderVsMat\WorOrderVsMatModelArgs.cs" />
+    <Compile Include="PC\WorWorkOrder\WorkOrderDetailModel.cs" />
+    <Compile Include="PC\WorWorkOrder\WorkOrderHeaderModel.cs" />
+    <Compile Include="PC\WorWorkOrder\WorkOrderMaterialModel.cs" />
+    <Compile Include="PC\WorWorkOrder\WorWorkOrderModelArgs.cs" />
+    <Compile Include="PO\Mrp\MrpdModel.cs" />
+    <Compile Include="PO\Mrp\MrphModel.cs" />
+    <Compile Include="PO\Mrp\MrpmModel.cs" />
+    <Compile Include="PO\Mrp\MrpModelArgs.cs" />
+    <Compile Include="PO\Mrp\PacPopupModel.cs" />
+    <Compile Include="PO\Mrp\PoePopupModel.cs" />
+    <Compile Include="PO\Mrp\PoPopupModel.cs" />
+    <Compile Include="PO\Mrp\PorDetailModel.cs" />
+    <Compile Include="PO\Mrp\PorModel.cs" />
+    <Compile Include="PO\PurOrderInp\PurInpDetailModel.cs" />
+    <Compile Include="PO\PurOrderInp\PurOrderInpModel.cs" />
+    <Compile Include="PO\PurOrderInp\PurOrderInpModelArgs.cs" />
+    <Compile Include="PO\PurOrder\PorListToPoModel.cs" />
+    <Compile Include="PO\PurOrder\PorModel.cs" />
+    <Compile Include="PO\PurOrder\PurOrderAddReportModel.cs" />
+    <Compile Include="PO\PurOrder\PurOrderDetailModel.cs" />
+    <Compile Include="PO\PurOrder\PurOrderModel.cs" />
+    <Compile Include="PO\PurOrder\PurOrderModelArgs.cs" />
+    <Compile Include="PO\PurPack\InvoiceModel.cs" />
+    <Compile Include="PO\PurPack\PurPackExcelUploadModel.cs" />
+    <Compile Include="PO\PurPack\PurPackModel.cs" />
+    <Compile Include="PO\PurPack\PurPackModelArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QC\AppLine\AppLineModel.cs" />
+    <Compile Include="QC\AppLine\AppLineModelArgs.cs" />
+    <Compile Include="QC\AppHist\AppHistReportModel.cs" />
+    <Compile Include="QC\AppHist\AppHistDetailInspModel.cs" />
+    <Compile Include="QC\AppHist\AppHistDetailModel.cs" />
+    <Compile Include="QC\AppHist\AppHistHeaderModel.cs" />
+    <Compile Include="QC\AppHist\AppHistModelArgs.cs" />
+    <Compile Include="QC\IqcInsp\IqcInspFailModel.cs" />
+    <Compile Include="QC\IqcInsp\IqcInspModelArgs.cs" />
+    <Compile Include="QC\IqcInsp\IqcInspItemModel.cs" />
+    <Compile Include="QC\IqcInsp\IqcInspModel.cs" />
+    <Compile Include="QC\NcrHist\NcrHistModelArgs.cs" />
+    <Compile Include="QC\NcrHist\NcrHistDetailModel.cs" />
+    <Compile Include="QC\NcrHist\NcrHistHeaderModel.cs" />
+    <Compile Include="QC\NcrRegJudge\NcrRegJudgeConfirmModel.cs" />
+    <Compile Include="QC\NcrRegJudge\NcrRegJudgeDetailModel.cs" />
+    <Compile Include="QC\NcrRegJudge\NcrRegJudgeHeaderModel.cs" />
+    <Compile Include="QC\NcrRegJudge\NcrRegJudgeModelArgs.cs" />
+    <Compile Include="QC\NcrReg\NcrRegDetailBomModel.cs" />
+    <Compile Include="QC\NcrReg\NcrRegDetailModel.cs" />
+    <Compile Include="QC\NcrReg\NcrRegHeaderConfirmModel.cs" />
+    <Compile Include="QC\NcrReg\NcrRegHeaderModel.cs" />
+    <Compile Include="QC\NcrReg\NcrRegModelArgs.cs" />
+    <Compile Include="QC\QchDlvRead\QchDlvReadDetailModel.cs" />
+    <Compile Include="QC\QchDlvRead\QchDlvReadHeaderModel.cs" />
+    <Compile Include="QC\QchDlvRead\QchDlvReadModelArgs.cs" />
+    <Compile Include="QC\QchFinalRead\QchFinalReadDetailModel.cs" />
+    <Compile Include="QC\QchFinalRead\QchFinalReadHeaderModel.cs" />
+    <Compile Include="QC\QchFinalRead\QchFinalReadModelArgs.cs" />
+    <Compile Include="QC\QchFmlRead\QchFmlReadDetailModel.cs" />
+    <Compile Include="QC\QchFmlRead\QchFmlReadHeaderModel.cs" />
+    <Compile Include="QC\QchFmlRead\QchFmlReadModelArgs.cs" />
+    <Compile Include="QC\QchNcrRegRead\QchNcrRegReadDetailModel.cs" />
+    <Compile Include="QC\QchNcrRegRead\QchNcrRegReadHeaderModel.cs" />
+    <Compile Include="QC\QchNcrRegRead\QchNcrRegReadModelArgs.cs" />
+    <Compile Include="QC\QchPatrolRead\QchPatrolReadDetailModel.cs" />
+    <Compile Include="QC\QchPatrolRead\QchPatrolReadHeaderModel.cs" />
+    <Compile Include="QC\QchPatrolRead\QchPatrolReadModelArgs.cs" />
+    <Compile Include="SD\CiqDlvClose\CiqDlvCloseModelArgs.cs" />
+    <Compile Include="SD\CiqDlvClose\DlvResultDetailModel.cs" />
+    <Compile Include="SD\CiqDlvClose\SkbaDataExcelUploadModel.cs" />
+    <Compile Include="SD\DlvConfirm2\DlvConfirm2ModelArgs.cs" />
+    <Compile Include="SD\DlvConfirm2\DlvPopOrdDetailLpackModel.cs" />
+    <Compile Include="SD\DlvConfirm2\DlvPopOrdDetailModel.cs" />
+    <Compile Include="SD\DlvConfirm2\DlvPopOrdDetailMpackModel.cs" />
+    <Compile Include="SD\DlvConfirm2\DlvPopOrdModel.cs" />
+    <Compile Include="SD\DlvConfirm2\DlvResultDetailModel.cs" />
+    <Compile Include="SD\DlvConfirm2\DlvResultHuModel.cs" />
+    <Compile Include="SD\DlvConfirm2\DlvResultLpackModel.cs" />
+    <Compile Include="SD\DlvConfirm2\DlvResultModel.cs" />
+    <Compile Include="SD\DlvConfirm2\DlvResultMpackModel.cs" />
+    <Compile Include="SD\DlvHist\DlvHistDetailJisModel.cs" />
+    <Compile Include="SD\DlvHist\DlvHistDetailModel.cs" />
+    <Compile Include="SD\DlvHist\DlvHistModel.cs" />
+    <Compile Include="SD\DlvHist\DlvHistModelArgs.cs" />
+    <Compile Include="SD\DlvOrderHist\DlvOrderHistDetailModel.cs" />
+    <Compile Include="SD\DlvOrderHist\DlvOrderHistHuDetailModel.cs" />
+    <Compile Include="SD\DlvOrderHist\DlvOrderHistModel.cs" />
+    <Compile Include="SD\DlvOrderHist\DlvOrderHistModelArgs.cs" />
+    <Compile Include="SD\DlvOrderVsResult\DlvOrderVsResultModel.cs" />
+    <Compile Include="SD\DlvOrderVsResult\DlvOrderVsResultModelArgs.cs" />
+    <Compile Include="SD\DlvOrder\CheckItemAndHuQtyResultModel.cs" />
+    <Compile Include="SD\DlvOrder\DlvOrderDetailModel.cs" />
+    <Compile Include="SD\DlvOrder\DlvOrderModel.cs" />
+    <Compile Include="SD\DlvOrder\DlvOrderModelArgs.cs" />
+    <Compile Include="SD\DlvOrder\DlvPlanModel.cs" />
+    <Compile Include="SD\DlvOrder\ReservedHuModel.cs" />
+    <Compile Include="SD\DlvOrder\SaveReservedHuModel.cs" />
+    <Compile Include="SD\DlvOrder\ToReserveHuModel.cs" />
+    <Compile Include="SD\DlvPlan\DlvPlanModel.cs" />
+    <Compile Include="SD\DlvPlan\DlvPlanModelArgs.cs" />
+    <Compile Include="SD\DlvPlan\SalesOrderSummaryModel.cs" />
+    <Compile Include="SD\JisDetailSum\JisDetailSumModel.cs" />
+    <Compile Include="SD\JisDetailSum\JisDetailSumModelArgs.cs" />
+    <Compile Include="SD\DlvConfirm\DlvConfirmDetailHUModel.cs" />
+    <Compile Include="SD\DlvConfirm\DlvConfirmCardDetailModel.cs" />
+    <Compile Include="SD\DlvConfirm\DlvConfirmDetailJITModel.cs" />
+    <Compile Include="SD\DlvConfirm\DlvConfirmDetailJISModel.cs" />
+    <Compile Include="SD\DlvConfirm\DlvConfirmCardHeaderModel.cs" />
+    <Compile Include="SD\DlvConfirm\DlvConfirmHeaderModel.cs" />
+    <Compile Include="SD\DlvConfirm\DlvConfirmModelArgs.cs" />
+    <Compile Include="SD\SalesOrderHist\SalesOrderHistDetailModel.cs" />
+    <Compile Include="SD\SalesOrderHist\SalesOrderHistModel.cs" />
+    <Compile Include="SD\SalesOrderHist\SalesOrderHistModelArgs.cs" />
+    <Compile Include="SD\SalesOrder\SalesOrderDetailModel.cs" />
+    <Compile Include="SD\SalesOrder\SalesOrderModel.cs" />
+    <Compile Include="SD\SalesOrder\SalesOrderModelArgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.PurInboundHist.PurInboundHistModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.PurInboundHist.PurInboundHistModelArgs.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.PC.WorkOrder.WorkOrderBomDModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.PM.ProcWorkActInq.ProcWorkActInqModel.datasource" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,1852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF138C73-54A9-4F27-A460-4B91B0D9809E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BPack.Carrying.App</RootNamespace>
+    <AssemblyName>BPack.Carrying.App</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BPack.Run\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\BPack.Run\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="BPack.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BPack.Lib\BPack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BPack.IStrap, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BPack.Lib\BPack.IStrap.dll</HintPath>
+    </Reference>
+    <Reference Include="BPack.Model.Annotation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BPack.Lib\BPack.Model.Annotation.dll</HintPath>
+    </Reference>
+    <Reference Include="BPack.Strap, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BPack.Lib\BPack.Strap.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CT\PjtAct\PjtActArgs.cs" />
+    <Compile Include="CT\PjtAct\PjtActList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT\PjtAct\PjtActList.Designer.cs">
+      <DependentUpon>PjtActList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CT\PjtAct\PjtActMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT\PjtAct\PjtActMain.Designer.cs">
+      <DependentUpon>PjtActMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectActivity.Designer.cs">
+      <DependentUpon>ProjectActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectActivityEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectActivityEditForm.Designer.cs">
+      <DependentUpon>ProjectActivityEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectDetail.Designer.cs">
+      <DependentUpon>ProjectDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectDetailEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectDetailEditForm.Designer.cs">
+      <DependentUpon>ProjectDetailEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectHeader.Designer.cs">
+      <DependentUpon>ProjectHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectManagerArgs.cs" />
+    <Compile Include="CT\ProjectManager\ProjectManagerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectManagerMain.Designer.cs">
+      <DependentUpon>ProjectManagerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT\ProjectManager\ProjectMember.Designer.cs">
+      <DependentUpon>ProjectMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\BpaGate\BpaGateMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\BpaGate\BpaGateMain.Designer.cs">
+      <DependentUpon>BpaGateMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\BpaGate\BpaInfoArgs.cs" />
+    <Compile Include="MD\BpaGate\BpList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\BpaGate\BpList.Designer.cs">
+      <DependentUpon>BpList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\BpaGate\GateList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\BpaGate\GateList.Designer.cs">
+      <DependentUpon>GateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\BpaInfo\BpaInfoArgs.cs" />
+    <Compile Include="MD\BpaInfo\BpaInfoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\BpaInfo\BpaInfoMain.Designer.cs">
+      <DependentUpon>BpaInfoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\BpaInfo\BpList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\BpaInfo\BpList.Designer.cs">
+      <DependentUpon>BpList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\BpaInfo\ContactList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\BpaInfo\ContactList.Designer.cs">
+      <DependentUpon>ContactList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\DlvGateLine\DlvGateLineArgs.cs" />
+    <Compile Include="MD\DlvGateLine\DlvGateLineMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\DlvGateLine\DlvGateLineMain.Designer.cs">
+      <DependentUpon>DlvGateLineMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\DlvGateLine\GateList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\DlvGateLine\GateList.Designer.cs">
+      <DependentUpon>GateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\DlvGateLine\GateListEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MD\DlvGateLine\GateListEditForm.Designer.cs">
+      <DependentUpon>GateListEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\DlvGateLine\PartnerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\DlvGateLine\PartnerList.Designer.cs">
+      <DependentUpon>PartnerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\DlvJisInfo\JISList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\DlvJisInfo\JISList.Designer.cs">
+      <DependentUpon>JISList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\DlvJisInfo\DlvJisInfoArgs.cs" />
+    <Compile Include="MD\DlvJisInfo\DlvJisInfoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\DlvJisInfo\DlvJisInfoMain.Designer.cs">
+      <DependentUpon>DlvJisInfoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\DlvJisInfo\GateList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\DlvJisInfo\GateList.Designer.cs">
+      <DependentUpon>GateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\DlvJisInfo\JISListEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MD\DlvJisInfo\JISListEditForm.Designer.cs">
+      <DependentUpon>JISListEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\DlvLineCarType\CarTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\DlvLineCarType\CarTypeList.Designer.cs">
+      <DependentUpon>CarTypeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\DlvLineCarType\DlvLineCarTypeArgs.cs" />
+    <Compile Include="MD\DlvLineCarType\DlvLineCarTypeMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\DlvLineCarType\DlvLineCarTypeMain.Designer.cs">
+      <DependentUpon>DlvLineCarTypeMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\DlvLineCarType\GateList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\DlvLineCarType\GateList.Designer.cs">
+      <DependentUpon>GateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\EquInfo\CheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\EquInfo\CheckList.Designer.cs">
+      <DependentUpon>CheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\EquInfo\EquInfoArgs.cs" />
+    <Compile Include="MD\EquInfo\EquInfoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\EquInfo\EquInfoMain.Designer.cs">
+      <DependentUpon>EquInfoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\EquInfo\EquList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\EquInfo\EquList.Designer.cs">
+      <DependentUpon>EquList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\EquWcEqu\EquWcEquArgs.cs" />
+    <Compile Include="MD\GirType\GirTypeArgs.cs" />
+    <Compile Include="MD\GirType\GirTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\GirType\GirTypeList.Designer.cs">
+      <DependentUpon>GirTypeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\GirType\GirTypeMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\GirType\GirTypeMain.Designer.cs">
+      <DependentUpon>GirTypeMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\GirWareHouse\GirLocList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\GirWareHouse\GirLocList.Designer.cs">
+      <DependentUpon>GirLocList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\GirWareHouse\GirWareHouseArgs.cs" />
+    <Compile Include="MD\GirWareHouse\GirWareHouseMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\GirWareHouse\GirWareHouseMain.Designer.cs">
+      <DependentUpon>GirWareHouseMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\GirWareHouse\GirWhList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\GirWareHouse\GirWhList.Designer.cs">
+      <DependentUpon>GirWhList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\GirWareHouse\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MD\GirWareHouse\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmBomTree\BomTreeReverseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmBomTree\BomTreeReverseList.Designer.cs">
+      <DependentUpon>BomTreeReverseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmBomTree\BomTreeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmBomTree\BomTreeList.Designer.cs">
+      <DependentUpon>BomTreeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmBomTree\ItemBomList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmBomTree\ItemBomList.Designer.cs">
+      <DependentUpon>ItemBomList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmBomTree\ItmBomTreeArgs.cs" />
+    <Compile Include="MD\ItmBomTree\ItmBomTreeMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmBomTree\ItmBomTreeMain.Designer.cs">
+      <DependentUpon>ItmBomTreeMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmBom\BomDetailList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmBom\BomDetailList.Designer.cs">
+      <DependentUpon>BomDetailList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmBom\BomDetailEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MD\ItmBom\BomDetailEditForm.Designer.cs">
+      <DependentUpon>BomDetailEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmBom\BomHeaderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmBom\BomHeaderList.Designer.cs">
+      <DependentUpon>BomHeaderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmBom\ItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmBom\ItemList.Designer.cs">
+      <DependentUpon>ItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmBom\ItmBomMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmBom\ItmBomMain.Designer.cs">
+      <DependentUpon>ItmBomMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmBom\ItmBomArgs.cs" />
+    <Compile Include="MD\ItmItemGroup\ItemGroupList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmItemGroup\ItemGroupList.Designer.cs">
+      <DependentUpon>ItemGroupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmItemGroup\ItmItemGroupArgs.cs" />
+    <Compile Include="MD\ItmItemGroup\ItmItemGroupMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmItemGroup\ItmItemGroupMain.Designer.cs">
+      <DependentUpon>ItmItemGroupMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmItemInfo\ConvFactorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmItemInfo\ConvFactorList.Designer.cs">
+      <DependentUpon>ConvFactorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmItemInfo\ItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmItemInfo\ItemList.Designer.cs">
+      <DependentUpon>ItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmItemInfo\ItmItemInfoArgs.cs" />
+    <Compile Include="MD\ItmItemInfo\ItmItemInfoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmItemInfo\ItmItemInfoMain.Designer.cs">
+      <DependentUpon>ItmItemInfoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmItemInfo\ItemListEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MD\ItmItemInfo\ItemListEditForm.Designer.cs">
+      <DependentUpon>ItemListEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmItemType\ItemTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmItemType\ItemTypeList.Designer.cs">
+      <DependentUpon>ItemTypeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmItemType\ItmItemTypeArgs.cs" />
+    <Compile Include="MD\ItmItemType\ItmItemTypeMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmItemType\ItmItemTypeMain.Designer.cs">
+      <DependentUpon>ItmItemTypeMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmPurchase\ItmPurchaseArgs.cs" />
+    <Compile Include="MD\ItmPurchase\ItmPurchaseMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmPurchase\ItmPurchaseMain.Designer.cs">
+      <DependentUpon>ItmPurchaseMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmPurchase\ItmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmPurchase\ItmList.Designer.cs">
+      <DependentUpon>ItmList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmPurchase\ItmPurchaseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmPurchase\ItmPurchaseList.Designer.cs">
+      <DependentUpon>ItmPurchaseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmSales\ItmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmSales\ItmList.Designer.cs">
+      <DependentUpon>ItmList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmSales\ItmSalesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmSales\ItmSalesList.Designer.cs">
+      <DependentUpon>ItmSalesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmSales\ItmSalesMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\ItmSales\ItmSalesMain.Designer.cs">
+      <DependentUpon>ItmSalesMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\ItmSales\ItmSalesArgs.cs" />
+    <Compile Include="MD\MolInfo\MoldList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\MolInfo\MoldList.Designer.cs">
+      <DependentUpon>MoldList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\MolInfo\MolInfoArgs.cs" />
+    <Compile Include="MD\MolInfo\MolInfoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\MolInfo\MolInfoMain.Designer.cs">
+      <DependentUpon>MolInfoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\MolItem\ItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\MolItem\ItemList.Designer.cs">
+      <DependentUpon>ItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\MolItem\MoldList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\MolItem\MoldList.Designer.cs">
+      <DependentUpon>MoldList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\MolItem\MolItemArgs.cs" />
+    <Compile Include="MD\MolItem\MolItemMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\MolItem\MolItemMain.Designer.cs">
+      <DependentUpon>MolItemMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgComp\OrgCompArgs.cs" />
+    <Compile Include="MD\OrgComp\OrgCompList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\OrgComp\OrgCompList.Designer.cs">
+      <DependentUpon>OrgCompList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgComp\OrgCompMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\OrgComp\OrgCompMain.Designer.cs">
+      <DependentUpon>OrgCompMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgDept\OrgCompList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\OrgDept\OrgCompList.Designer.cs">
+      <DependentUpon>OrgCompList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgDept\OrgDeptArgs.cs" />
+    <Compile Include="MD\OrgDept\OrgDeptList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\OrgDept\OrgDeptList.Designer.cs">
+      <DependentUpon>OrgDeptList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgDept\OrgDeptMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\OrgDept\OrgDeptMain.Designer.cs">
+      <DependentUpon>OrgDeptMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgPlant\OrgCompList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\OrgPlant\OrgCompList.Designer.cs">
+      <DependentUpon>OrgCompList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgPlant\OrgPlantArgs.cs" />
+    <Compile Include="MD\OrgPlant\OrgPlantList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\OrgPlant\OrgPlantList.Designer.cs">
+      <DependentUpon>OrgPlantList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgPlant\OrgPlantMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\OrgPlant\OrgPlantMain.Designer.cs">
+      <DependentUpon>OrgPlantMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgUser\OrgUserEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MD\OrgUser\OrgUserEditForm.Designer.cs">
+      <DependentUpon>OrgUserEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgUser\PasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\OrgUser\PasswordChange.Designer.cs">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgUser\OrgDeptList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\OrgUser\OrgDeptList.Designer.cs">
+      <DependentUpon>OrgDeptList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgUser\OrgUserArgs.cs" />
+    <Compile Include="MD\OrgUser\OrgUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\OrgUser\OrgUserList.Designer.cs">
+      <DependentUpon>OrgUserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\OrgUser\OrgUserMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\OrgUser\OrgUserMain.Designer.cs">
+      <DependentUpon>OrgUserMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdCalendar\CalendarList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdCalendar\CalendarList.Designer.cs">
+      <DependentUpon>CalendarList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdCalendar\PrdCalendarArgs.cs" />
+    <Compile Include="MD\PrdCalendar\PrdCalendarMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdCalendar\PrdCalendarMain.Designer.cs">
+      <DependentUpon>PrdCalendarMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdRouting\MaterialList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdRouting\MaterialList.Designer.cs">
+      <DependentUpon>MaterialList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdRouting\OperationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdRouting\OperationList.Designer.cs">
+      <DependentUpon>OperationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdRouting\PrdRoutingArgs.cs" />
+    <Compile Include="MD\PrdRouting\PrdRoutingMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdRouting\PrdRoutingMain.Designer.cs">
+      <DependentUpon>PrdRoutingMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdRouting\RoutingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdRouting\RoutingList.Designer.cs">
+      <DependentUpon>RoutingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdRouting\RoutingListEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MD\PrdRouting\RoutingListEditForm.Designer.cs">
+      <DependentUpon>RoutingListEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdShiftOper\OperList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdShiftOper\OperList.Designer.cs">
+      <DependentUpon>OperList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdShiftOper\PrdShiftOperArgs.cs" />
+    <Compile Include="MD\PrdShiftOper\PrdShiftOperMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdShiftOper\PrdShiftOperMain.Designer.cs">
+      <DependentUpon>PrdShiftOperMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdShiftOper\ShiftList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdShiftOper\ShiftList.Designer.cs">
+      <DependentUpon>ShiftList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdShift\PrdShiftArgs.cs" />
+    <Compile Include="MD\PrdShift\PrdShiftMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdShift\PrdShiftMain.Designer.cs">
+      <DependentUpon>PrdShiftMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdShift\ShiftList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdShift\ShiftList.Designer.cs">
+      <DependentUpon>ShiftList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdWorkCenter\PlantList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdWorkCenter\PlantList.Designer.cs">
+      <DependentUpon>PlantList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdWorkCenter\PrdWorkCenterArgs.cs" />
+    <Compile Include="MD\PrdWorkCenter\PrdWorkCenterMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdWorkCenter\PrdWorkCenterMain.Designer.cs">
+      <DependentUpon>PrdWorkCenterMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\PrdWorkCenter\WorkCenterList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\PrdWorkCenter\WorkCenterList.Designer.cs">
+      <DependentUpon>WorkCenterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciChkList\QciChkList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciChkList\QciChkList.Designer.cs">
+      <DependentUpon>QciChkList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciChkList\QciChkListEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MD\QciChkList\QciChkListEditForm.Designer.cs">
+      <DependentUpon>QciChkListEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciChkList\QciChkListMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciChkList\QciChkListMain.Designer.cs">
+      <DependentUpon>QciChkListMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciChkList\QciChkListArgs.cs" />
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupArgs.cs" />
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupItemEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupItemEditForm.Designer.cs">
+      <DependentUpon>QciFMLGroupItemEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupItemList.Designer.cs">
+      <DependentUpon>QciFMLGroupItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupList.Designer.cs">
+      <DependentUpon>QciFMLGroupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciFMLGroup\QciFMLGroupMain.Designer.cs">
+      <DependentUpon>QciFMLGroupMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciInspStd\CheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciInspStd\CheckList.Designer.cs">
+      <DependentUpon>CheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciInspStd\RevisionListEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MD\QciInspStd\RevisionListEditForm.Designer.cs">
+      <DependentUpon>RevisionListEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciInspStd\CheckListEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MD\QciInspStd\CheckListEditForm.Designer.cs">
+      <DependentUpon>CheckListEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciInspStd\CopyRevisionMdiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciInspStd\CopyRevisionMdiForm.Designer.cs">
+      <DependentUpon>CopyRevisionMdiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciInspStd\RevisionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciInspStd\RevisionList.Designer.cs">
+      <DependentUpon>RevisionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciInspStd\StandardList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciInspStd\StandardList.Designer.cs">
+      <DependentUpon>StandardList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciInspStd\QciInspStdArgs.cs" />
+    <Compile Include="MD\QciInspStd\QciInspStdMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciInspStd\QciInspStdMain.Designer.cs">
+      <DependentUpon>QciInspStdMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciInspStd\StandardListEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MD\QciInspStd\StandardListEditForm.Designer.cs">
+      <DependentUpon>StandardListEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciNcr\NcrCodeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciNcr\NcrCodeList.Designer.cs">
+      <DependentUpon>NcrCodeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciNcr\NcrTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciNcr\NcrTypeList.Designer.cs">
+      <DependentUpon>NcrTypeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciNcr\QciNcrMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\QciNcr\QciNcrMain.Designer.cs">
+      <DependentUpon>QciNcrMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\QciNcr\QciNcrArgs.cs" />
+    <Compile Include="MD\SomDevice\DeviceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\SomDevice\DeviceList.Designer.cs">
+      <DependentUpon>DeviceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\SomDevice\ModeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\SomDevice\ModeList.Designer.cs">
+      <DependentUpon>ModeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\SomDevice\SettingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\SomDevice\SettingList.Designer.cs">
+      <DependentUpon>SettingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD\SomDevice\SomDeviceArgs.cs" />
+    <Compile Include="MD\SomDevice\SomDeviceMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD\SomDevice\SomDeviceMain.Designer.cs">
+      <DependentUpon>SomDeviceMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MI\CommonCodeManager\ChildCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MI\CommonCodeManager\ChildCode.Designer.cs">
+      <DependentUpon>ChildCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MI\CommonCodeManager\CommonCodeManagerArgs.cs" />
+    <Compile Include="MI\CommonCodeManager\CommonCodeManagerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MI\CommonCodeManager\CommonCodeManagerMain.Designer.cs">
+      <DependentUpon>CommonCodeManagerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MI\CommonCodeManager\ParentCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MI\CommonCodeManager\ParentCode.Designer.cs">
+      <DependentUpon>ParentCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirClose\CloseWhList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirClose\CloseWhList.Designer.cs">
+      <DependentUpon>CloseWhList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirClose\CloseDateList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirClose\CloseDateList.Designer.cs">
+      <DependentUpon>CloseDateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirClose\CloseLocList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirClose\CloseLocList.Designer.cs">
+      <DependentUpon>CloseLocList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirClose\GirCloseArgs.cs" />
+    <Compile Include="MM\GirClose\GirCloseMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirClose\GirCloseMain.Designer.cs">
+      <DependentUpon>GirCloseMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirHist\GirHistArgs.cs" />
+    <Compile Include="MM\GirHist\GirHistList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirHist\GirHistList.Designer.cs">
+      <DependentUpon>GirHistList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirHist\GirHistMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirHist\GirHistMain.Designer.cs">
+      <DependentUpon>GirHistMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirLocStock\GirLocStockArgs.cs" />
+    <Compile Include="MM\GirLocStock\GirLocStockMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirLocStock\GirLocStockMain.Designer.cs">
+      <DependentUpon>GirLocStockMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirLocStock\LocGirList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirLocStock\LocGirList.Designer.cs">
+      <DependentUpon>LocGirList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirLocStock\LocHuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirLocStock\LocHuList.Designer.cs">
+      <DependentUpon>LocHuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirLocStock\LocStockList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirLocStock\LocStockList.Designer.cs">
+      <DependentUpon>LocStockList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirStock\GirList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirStock\GirList.Designer.cs">
+      <DependentUpon>GirList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirStock\GirStockArgs.cs" />
+    <Compile Include="MM\GirStock\GirStockMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirStock\GirStockMain.Designer.cs">
+      <DependentUpon>GirStockMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirStock\StockList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirStock\StockList.Designer.cs">
+      <DependentUpon>StockList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\GirStock\WhHuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\GirStock\WhHuList.Designer.cs">
+      <DependentUpon>WhHuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\HumHuMaster\ChildHuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\HumHuMaster\ChildHuList.Designer.cs">
+      <DependentUpon>ChildHuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\HumHuMaster\HuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\HumHuMaster\HuList.Designer.cs">
+      <DependentUpon>HuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\HumHuMaster\HumHuMasterArgs.cs" />
+    <Compile Include="MM\HumHuMaster\HumHuMasterMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\HumHuMaster\HumHuMasterMain.Designer.cs">
+      <DependentUpon>HumHuMasterMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\HumLocInfo\HumLocInfoArgs.cs" />
+    <Compile Include="MM\HumLocInfo\HumLocInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\HumLocInfo\HumLocInfoList.Designer.cs">
+      <DependentUpon>HumLocInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\HumLocInfo\HumLocInfoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\HumLocInfo\HumLocInfoMain.Designer.cs">
+      <DependentUpon>HumLocInfoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\MovDocConfirm\MovDocConfirmArgs.cs" />
+    <Compile Include="MM\MovDocConfirm\MovDocConfirmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\MovDocConfirm\MovDocConfirmMain.Designer.cs">
+      <DependentUpon>MovDocConfirmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\MovDocConfirm\MovDocList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\MovDocConfirm\MovDocList.Designer.cs">
+      <DependentUpon>MovDocList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\MovDocConfirm\MovDocReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MM\MovDocConfirm\MovDocReport.Designer.cs">
+      <DependentUpon>MovDocReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\MovDoc\MovDocEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MM\MovDoc\MovDocEditForm.Designer.cs">
+      <DependentUpon>MovDocEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\MovDoc\MovDocList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\MovDoc\MovDocList.Designer.cs">
+      <DependentUpon>MovDocList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\MovDoc\MovDocMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\MovDoc\MovDocMain.Designer.cs">
+      <DependentUpon>MovDocMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\MovDoc\MovDocArgs.cs" />
+    <Compile Include="MM\MovDoc\MovHuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\MovDoc\MovHuList.Designer.cs">
+      <DependentUpon>MovHuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\MovDoc\MovItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\MovDoc\MovItemList.Designer.cs">
+      <DependentUpon>MovItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\MovLoc\MovLocArgs.cs" />
+    <Compile Include="MM\PurInboundHist\PurInboundHistList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\PurInboundHist\PurInboundHistList.Designer.cs">
+      <DependentUpon>PurInboundHistList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\PurInboundHist\PurInboundHistArgs.cs" />
+    <Compile Include="MM\PurInboundHist\PurInboundHistMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\PurInboundHist\PurInboundHistMain.Designer.cs">
+      <DependentUpon>PurInboundHistMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\PurInbound\InDetailList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\PurInbound\InDetailList.Designer.cs">
+      <DependentUpon>InDetailList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\PurInbound\InHeaderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\PurInbound\InHeaderList.Designer.cs">
+      <DependentUpon>InHeaderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\PurInbound\InHuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\PurInbound\InHuList.Designer.cs">
+      <DependentUpon>InHuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM\PurInbound\PurInboundArgs.cs" />
+    <Compile Include="MM\PurInbound\PurInboundMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM\PurInbound\PurInboundMain.Designer.cs">
+      <DependentUpon>PurInboundMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeHuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeHuList.Designer.cs">
+      <DependentUpon>WoeHuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeOrderMaterialList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeOrderMaterialList.Designer.cs">
+      <DependentUpon>WoeOrderMaterialList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeParentHuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeParentHuList.Designer.cs">
+      <DependentUpon>WoeParentHuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeResultArgs.cs" />
+    <Compile Include="PC\WoeResult\WoeResultMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeResultMain.Designer.cs">
+      <DependentUpon>WoeResultMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeUsedMaterialList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeUsedMaterialList.Designer.cs">
+      <DependentUpon>WoeUsedMaterialList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeWorkResultList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeWorkResultList.Designer.cs">
+      <DependentUpon>WoeWorkResultList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeWorkOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WoeResult\WoeWorkOrderList.Designer.cs">
+      <DependentUpon>WoeWorkOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoRsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoRsList.Designer.cs">
+      <DependentUpon>WoeRsltInfoRsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoHuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoHuList.Designer.cs">
+      <DependentUpon>WoeRsltInfoHuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoList.Designer.cs">
+      <DependentUpon>WoeRsltInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoArgs.cs" />
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WoeRsltInfo\WoeRsltInfoMain.Designer.cs">
+      <DependentUpon>WoeRsltInfoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WorkOrder\WorkOrderListEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PC\WorkOrder\WorkOrderListEditForm.Designer.cs">
+      <DependentUpon>WorkOrderListEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WorkOrder\WorkOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WorkOrder\WorkOrderList.Designer.cs">
+      <DependentUpon>WorkOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WorkOrder\WoMtrlList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WorkOrder\WoMtrlList.Designer.cs">
+      <DependentUpon>WoMtrlList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WorkOrder\WorkOrderArgs.cs" />
+    <Compile Include="PC\WorkOrder\WorkOrderMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WorkOrder\WorkOrderMain.Designer.cs">
+      <DependentUpon>WorkOrderMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WorWorkOrder\WorkOrderDetailList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WorWorkOrder\WorkOrderDetailList.Designer.cs">
+      <DependentUpon>WorkOrderDetailList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WorWorkOrder\WorkOrderHeaderEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PC\WorWorkOrder\WorkOrderHeaderEditForm.Designer.cs">
+      <DependentUpon>WorkOrderHeaderEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WorWorkOrder\WorkOrderHeaderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WorWorkOrder\WorkOrderHeaderList.Designer.cs">
+      <DependentUpon>WorkOrderHeaderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WorWorkOrder\WorkOrderMaterialList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WorWorkOrder\WorkOrderMaterialList.Designer.cs">
+      <DependentUpon>WorkOrderMaterialList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC\WorWorkOrder\WorWorkOrderArgs.cs" />
+    <Compile Include="PC\WorWorkOrder\WorWorkOrderMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC\WorWorkOrder\WorWorkOrderMain.Designer.cs">
+      <DependentUpon>WorWorkOrderMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QC\QchFmlRead\QchFmlReadArgs.cs" />
+    <Compile Include="QC\QchFmlRead\QchFmlReadDetailList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\QchFmlRead\QchFmlReadDetailList.Designer.cs">
+      <DependentUpon>QchFmlReadDetailList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\QchFmlRead\QchFmlReadHeaderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\QchFmlRead\QchFmlReadHeaderList.Designer.cs">
+      <DependentUpon>QchFmlReadHeaderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\QchFmlRead\QchFmlReadMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\QchFmlRead\QchFmlReadMain.Designer.cs">
+      <DependentUpon>QchFmlReadMain.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BPack.CommonMes\BPack.CommonMes.csproj">
+      <Project>{d2cadcfb-70a2-47a7-9d3a-b5c58bbb90aa}</Project>
+      <Name>BPack.CommonMes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BPack.Model.App\BPack.Model.App.csproj">
+      <Project>{AE01107E-5D54-4744-814F-958066C0FAE1}</Project>
+      <Name>BPack.Model.App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BPack.Pocket.App\BPack.Pocket.App.csproj">
+      <Project>{5fe0d94d-0763-4aef-9844-419f89f9a21b}</Project>
+      <Name>BPack.Pocket.App</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CT\PjtAct\PjtActList.resx">
+      <DependentUpon>PjtActList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CT\PjtAct\PjtActMain.resx">
+      <DependentUpon>PjtActMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CT\ProjectManager\ProjectActivity.resx">
+      <DependentUpon>ProjectActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CT\ProjectManager\ProjectActivityEditForm.resx">
+      <DependentUpon>ProjectActivityEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CT\ProjectManager\ProjectDetail.resx">
+      <DependentUpon>ProjectDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CT\ProjectManager\ProjectDetailEditForm.resx">
+      <DependentUpon>ProjectDetailEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CT\ProjectManager\ProjectHeader.resx">
+      <DependentUpon>ProjectHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CT\ProjectManager\ProjectManagerMain.resx">
+      <DependentUpon>ProjectManagerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CT\ProjectManager\ProjectMember.resx">
+      <DependentUpon>ProjectMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\BpaGate\BpaGateMain.resx">
+      <DependentUpon>BpaGateMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\BpaGate\BpList.resx">
+      <DependentUpon>BpList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\BpaGate\GateList.resx">
+      <DependentUpon>GateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\BpaInfo\BpaInfoMain.resx">
+      <DependentUpon>BpaInfoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\BpaInfo\BpList.resx">
+      <DependentUpon>BpList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\BpaInfo\ContactList.resx">
+      <DependentUpon>ContactList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\DlvGateLine\DlvGateLineMain.resx">
+      <DependentUpon>DlvGateLineMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\DlvGateLine\GateList.resx">
+      <DependentUpon>GateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\DlvGateLine\GateListEditForm.resx">
+      <DependentUpon>GateListEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\DlvGateLine\PartnerList.resx">
+      <DependentUpon>PartnerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\DlvJisInfo\JISList.resx">
+      <DependentUpon>JISList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\DlvJisInfo\DlvJisInfoMain.resx">
+      <DependentUpon>DlvJisInfoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\DlvJisInfo\GateList.resx">
+      <DependentUpon>GateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\DlvJisInfo\JISListEditForm.resx">
+      <DependentUpon>JISListEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\DlvLineCarType\CarTypeList.resx">
+      <DependentUpon>CarTypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\DlvLineCarType\DlvLineCarTypeMain.resx">
+      <DependentUpon>DlvLineCarTypeMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\DlvLineCarType\GateList.resx">
+      <DependentUpon>GateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\EquInfo\CheckList.resx">
+      <DependentUpon>CheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\EquInfo\EquInfoMain.resx">
+      <DependentUpon>EquInfoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\EquInfo\EquList.resx">
+      <DependentUpon>EquList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\GirType\GirTypeList.resx">
+      <DependentUpon>GirTypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\GirType\GirTypeMain.resx">
+      <DependentUpon>GirTypeMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\GirWareHouse\GirLocList.resx">
+      <DependentUpon>GirLocList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\GirWareHouse\GirWareHouseMain.resx">
+      <DependentUpon>GirWareHouseMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\GirWareHouse\GirWhList.resx">
+      <DependentUpon>GirWhList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\GirWareHouse\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmBomTree\BomTreeReverseList.resx">
+      <DependentUpon>BomTreeReverseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmBomTree\BomTreeList.resx">
+      <DependentUpon>BomTreeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmBomTree\ItemBomList.resx">
+      <DependentUpon>ItemBomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmBomTree\ItmBomTreeMain.resx">
+      <DependentUpon>ItmBomTreeMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmBom\BomDetailList.resx">
+      <DependentUpon>BomDetailList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmBom\BomDetailEditForm.resx">
+      <DependentUpon>BomDetailEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmBom\BomHeaderList.resx">
+      <DependentUpon>BomHeaderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmBom\ItemList.resx">
+      <DependentUpon>ItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmBom\ItmBomMain.resx">
+      <DependentUpon>ItmBomMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmItemGroup\ItemGroupList.resx">
+      <DependentUpon>ItemGroupList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmItemGroup\ItmItemGroupMain.resx">
+      <DependentUpon>ItmItemGroupMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmItemInfo\ConvFactorList.resx">
+      <DependentUpon>ConvFactorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmItemInfo\ItemList.resx">
+      <DependentUpon>ItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmItemInfo\ItemListEditForm.resx">
+      <DependentUpon>ItemListEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmItemInfo\ItmItemInfoMain.resx">
+      <DependentUpon>ItmItemInfoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmItemType\ItemTypeList.resx">
+      <DependentUpon>ItemTypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmItemType\ItmItemTypeMain.resx">
+      <DependentUpon>ItmItemTypeMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmPurchase\ItmPurchaseMain.resx">
+      <DependentUpon>ItmPurchaseMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmPurchase\ItmList.resx">
+      <DependentUpon>ItmList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmPurchase\ItmPurchaseList.resx">
+      <DependentUpon>ItmPurchaseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmSales\ItmList.resx">
+      <DependentUpon>ItmList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmSales\ItmSalesList.resx">
+      <DependentUpon>ItmSalesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\ItmSales\ItmSalesMain.resx">
+      <DependentUpon>ItmSalesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\MolInfo\MoldList.resx">
+      <DependentUpon>MoldList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\MolInfo\MolInfoMain.resx">
+      <DependentUpon>MolInfoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\MolItem\ItemList.resx">
+      <DependentUpon>ItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\MolItem\MoldList.resx">
+      <DependentUpon>MoldList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\MolItem\MolItemMain.resx">
+      <DependentUpon>MolItemMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgComp\OrgCompList.resx">
+      <DependentUpon>OrgCompList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgComp\OrgCompMain.resx">
+      <DependentUpon>OrgCompMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgDept\OrgCompList.resx">
+      <DependentUpon>OrgCompList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgDept\OrgDeptList.resx">
+      <DependentUpon>OrgDeptList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgDept\OrgDeptMain.resx">
+      <DependentUpon>OrgDeptMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgPlant\OrgCompList.resx">
+      <DependentUpon>OrgCompList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgPlant\OrgPlantList.resx">
+      <DependentUpon>OrgPlantList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgPlant\OrgPlantMain.resx">
+      <DependentUpon>OrgPlantMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgUser\OrgDeptList.resx">
+      <DependentUpon>OrgDeptList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgUser\OrgUserEditForm.resx">
+      <DependentUpon>OrgUserEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgUser\OrgUserList.resx">
+      <DependentUpon>OrgUserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgUser\OrgUserMain.resx">
+      <DependentUpon>OrgUserMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\OrgUser\PasswordChange.resx">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdCalendar\CalendarList.resx">
+      <DependentUpon>CalendarList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdCalendar\PrdCalendarMain.resx">
+      <DependentUpon>PrdCalendarMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdRouting\MaterialList.resx">
+      <DependentUpon>MaterialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdRouting\OperationList.resx">
+      <DependentUpon>OperationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdRouting\PrdRoutingMain.resx">
+      <DependentUpon>PrdRoutingMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdRouting\RoutingList.resx">
+      <DependentUpon>RoutingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdRouting\RoutingListEditForm.resx">
+      <DependentUpon>RoutingListEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdShiftOper\OperList.resx">
+      <DependentUpon>OperList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdShiftOper\PrdShiftOperMain.resx">
+      <DependentUpon>PrdShiftOperMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdShiftOper\ShiftList.resx">
+      <DependentUpon>ShiftList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdShift\PrdShiftMain.resx">
+      <DependentUpon>PrdShiftMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdShift\ShiftList.resx">
+      <DependentUpon>ShiftList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdWorkCenter\PlantList.resx">
+      <DependentUpon>PlantList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdWorkCenter\PrdWorkCenterMain.resx">
+      <DependentUpon>PrdWorkCenterMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\PrdWorkCenter\WorkCenterList.resx">
+      <DependentUpon>WorkCenterList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciChkList\QciChkList.resx">
+      <DependentUpon>QciChkList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciChkList\QciChkListEditForm.resx">
+      <DependentUpon>QciChkListEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciChkList\QciChkListMain.resx">
+      <DependentUpon>QciChkListMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciFMLGroup\QciFMLGroupItemEditForm.resx">
+      <DependentUpon>QciFMLGroupItemEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciFMLGroup\QciFMLGroupItemList.resx">
+      <DependentUpon>QciFMLGroupItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciFMLGroup\QciFMLGroupList.resx">
+      <DependentUpon>QciFMLGroupList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciFMLGroup\QciFMLGroupMain.resx">
+      <DependentUpon>QciFMLGroupMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciInspStd\CheckList.resx">
+      <DependentUpon>CheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciInspStd\RevisionListEditForm.resx">
+      <DependentUpon>RevisionListEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciInspStd\CheckListEditForm.resx">
+      <DependentUpon>CheckListEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciInspStd\CopyRevisionMdiForm.resx">
+      <DependentUpon>CopyRevisionMdiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciInspStd\QciInspStdMain.resx">
+      <DependentUpon>QciInspStdMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciInspStd\RevisionList.resx">
+      <DependentUpon>RevisionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciInspStd\StandardList.resx">
+      <DependentUpon>StandardList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciInspStd\StandardListEditForm.resx">
+      <DependentUpon>StandardListEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciNcr\NcrCodeList.resx">
+      <DependentUpon>NcrCodeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciNcr\NcrTypeList.resx">
+      <DependentUpon>NcrTypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\QciNcr\QciNcrMain.resx">
+      <DependentUpon>QciNcrMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\SomDevice\DeviceList.resx">
+      <DependentUpon>DeviceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\SomDevice\ModeList.resx">
+      <DependentUpon>ModeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\SomDevice\SettingList.resx">
+      <DependentUpon>SettingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD\SomDevice\SomDeviceMain.resx">
+      <DependentUpon>SomDeviceMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MI\CommonCodeManager\ChildCode.resx">
+      <DependentUpon>ChildCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MI\CommonCodeManager\CommonCodeManagerMain.resx">
+      <DependentUpon>CommonCodeManagerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MI\CommonCodeManager\ParentCode.resx">
+      <DependentUpon>ParentCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirClose\CloseDateList.resx">
+      <DependentUpon>CloseDateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirClose\CloseLocList.resx">
+      <DependentUpon>CloseLocList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirClose\CloseWhList.resx">
+      <DependentUpon>CloseWhList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirClose\GirCloseMain.resx">
+      <DependentUpon>GirCloseMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirHist\GirHistList.resx">
+      <DependentUpon>GirHistList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirHist\GirHistMain.resx">
+      <DependentUpon>GirHistMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirLocStock\GirLocStockMain.resx">
+      <DependentUpon>GirLocStockMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirLocStock\LocGirList.resx">
+      <DependentUpon>LocGirList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirLocStock\LocHuList.resx">
+      <DependentUpon>LocHuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirLocStock\LocStockList.resx">
+      <DependentUpon>LocStockList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirStock\GirList.resx">
+      <DependentUpon>GirList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirStock\GirStockMain.resx">
+      <DependentUpon>GirStockMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirStock\StockList.resx">
+      <DependentUpon>StockList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\GirStock\WhHuList.resx">
+      <DependentUpon>WhHuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\HumLocInfo\HumLocInfoList.resx">
+      <DependentUpon>HumLocInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\HumLocInfo\HumLocInfoMain.resx">
+      <DependentUpon>HumLocInfoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\MovDocConfirm\MovDocConfirmMain.resx">
+      <DependentUpon>MovDocConfirmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\MovDocConfirm\MovDocList.resx">
+      <DependentUpon>MovDocList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\MovDocConfirm\MovDocReport.resx">
+      <DependentUpon>MovDocReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\MovDoc\MovHuList.resx">
+      <DependentUpon>MovHuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\MovDoc\MovItemList.resx">
+      <DependentUpon>MovItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\PurInboundHist\PurInboundHistList.resx">
+      <DependentUpon>PurInboundHistList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\PurInboundHist\PurInboundHistMain.resx">
+      <DependentUpon>PurInboundHistMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WoeResult\WoeHuList.resx">
+      <DependentUpon>WoeHuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WoeResult\WoeOrderMaterialList.resx">
+      <DependentUpon>WoeOrderMaterialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WoeResult\WoeParentHuList.resx">
+      <DependentUpon>WoeParentHuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WoeResult\WoeResultMain.resx">
+      <DependentUpon>WoeResultMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WoeResult\WoeUsedMaterialList.resx">
+      <DependentUpon>WoeUsedMaterialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WoeResult\WoeWorkOrderList.resx">
+      <DependentUpon>WoeWorkOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WoeResult\WoeWorkResultList.resx">
+      <DependentUpon>WoeWorkResultList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WoeRsltInfo\WoeRsltInfoRsList.resx">
+      <DependentUpon>WoeRsltInfoRsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WoeRsltInfo\WoeRsltInfoHuList.resx">
+      <DependentUpon>WoeRsltInfoHuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WoeRsltInfo\WoeRsltInfoList.resx">
+      <DependentUpon>WoeRsltInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WoeRsltInfo\WoeRsltInfoMain.resx">
+      <DependentUpon>WoeRsltInfoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WorkOrder\WorkOrderListEditForm.resx">
+      <DependentUpon>WorkOrderListEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WorkOrder\WorkOrderList.resx">
+      <DependentUpon>WorkOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WorkOrder\WoMtrlList.resx">
+      <DependentUpon>WoMtrlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WorkOrder\WorkOrderMain.resx">
+      <DependentUpon>WorkOrderMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\HumHuMaster\ChildHuList.resx">
+      <DependentUpon>ChildHuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\HumHuMaster\HuList.resx">
+      <DependentUpon>HuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\HumHuMaster\HumHuMasterMain.resx">
+      <DependentUpon>HumHuMasterMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\MovDoc\MovDocEditForm.resx">
+      <DependentUpon>MovDocEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\MovDoc\MovDocList.resx">
+      <DependentUpon>MovDocList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\MovDoc\MovDocMain.resx">
+      <DependentUpon>MovDocMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\PurInbound\InDetailList.resx">
+      <DependentUpon>InDetailList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\PurInbound\InHeaderList.resx">
+      <DependentUpon>InHeaderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\PurInbound\InHuList.resx">
+      <DependentUpon>InHuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM\PurInbound\PurInboundMain.resx">
+      <DependentUpon>PurInboundMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WorWorkOrder\WorkOrderDetailList.resx">
+      <DependentUpon>WorkOrderDetailList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WorWorkOrder\WorkOrderHeaderEditForm.resx">
+      <DependentUpon>WorkOrderHeaderEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WorWorkOrder\WorkOrderHeaderList.resx">
+      <DependentUpon>WorkOrderHeaderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WorWorkOrder\WorkOrderMaterialList.resx">
+      <DependentUpon>WorkOrderMaterialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC\WorWorkOrder\WorWorkOrderMain.resx">
+      <DependentUpon>WorWorkOrderMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="QC\QchFmlRead\QchFmlReadDetailList.resx">
+      <DependentUpon>QchFmlReadDetailList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\QchFmlRead\QchFmlReadHeaderList.resx">
+      <DependentUpon>QchFmlReadHeaderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\QchFmlRead\QchFmlReadMain.resx">
+      <DependentUpon>QchFmlReadMain.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\BPack.Carrying.App.MD.ItmBomTree.ItemBomList.datasource" />
+    <None Include="Properties\DataSources\BPack.Carrying.App.MD.ItmItemGroup.ItemGroupList.datasource" />
+    <None Include="Properties\DataSources\BPack.Carrying.App.MD.QciInspStd.RevisionList.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.CT.PjtAct.PjtActModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.CT.ProjectManager.ProjectActivityModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.CT.ProjectManager.ProjectDetailModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.CT.ProjectManager.ProjectHeaderModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.CT.ProjectManager.ProjectMemberModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.BasComp.CompModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.BpaGate.BparModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.BpaGate.GateModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.BpaInfo.BparModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.BpaInfo.ContModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.DlvGateLine.GateModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.DlvGateLine.PartnerModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.DlvJisInfo.DlvJisInfoGateModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.DlvJisInfo.DlvJisInfoJISModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.DlvLineCarType.DlvLineCarTypeGateModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.DlvLineCarType.DlvLineCarTypeModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.EquInfo.CheckModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.EquInfo.EquModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.GirType.TypeModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.GirWareHouse.LocationModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.GirWareHouse.WareHouseModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmBom.BomDetailModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmBom.BomHeaderModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmBom.ItemInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmBomTree.BomDetailModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmBomTree.BomTreeModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmBomTree.BomTreeReverseModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmBomTree.ItemBomTreeModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmItemGroup.ItemGroupModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmItemInfo.ItemConvModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmItemInfo.ItemInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmItemType.ItemTypeModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmPurchase.ItmListModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmPurchase.ItmPurchaseModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmSales.ItmListModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.ItmSales.ItmSalesModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.MolInfo.MoldListModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.MolItem.ItemListModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.MolItem.MoldListModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.OrgDept.CompModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.OrgDept.DeptModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.OrgPlant.PlantModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.OrgUser.DeptModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.OrgUser.UserModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.PrdCalendar.CalendarModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.PrdRouting.MaterialModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.PrdRouting.OperationModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.PrdRouting.RoutingModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.PrdShift.ShiftModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.PrdShiftOper.ShiftModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.PrdShiftOper.ShiftOperModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.PrdWorkCenter.PlantModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.PrdWorkCenter.WorkCenterModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.QciChkList.Class1.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.QciChkList.QciChkListModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.QciChkList.QciChkListModelArgs.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.QciFMLGroup.QciFMLGroupItemModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.QciFMLGroup.QciFMLGroupModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.QciInspStd.InspectionCheckListModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.QciInspStd.InspectionRevisionModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.QciInspStd.InspectionStandardModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.QciNcr.QciNcrCodeModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.QciNcr.QciNcrTypeModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.SomDevice.DeviceModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.SomDevice.ModeModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MD.SomDevice.SettingModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.CommonCodeManager.ChildCodeModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.CommonCodeManager.ParentCodeModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.CompInfo.CompInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.InOutType.InOutTypeModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.IpInfo.IpInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.IpManager.IpManagerDetailModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.IpManager.IpManagerModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ITConsumablesHist.ITConsumablesHistModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ItemGroup.ItemGroupModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ItemInfo.DevInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ItemInfo.ItemAttInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ItemInfo.ModelInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ItemInfoProd.ItemAttInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ItemInfoProd.ItemInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ItemInfoProd.ModelInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.JigInfo.JigInfoListModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ModelInfo.ModelInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.PartInfo.PartInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.PartType.PartTypeModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ProcInfo.ProcGroupModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ProcInfo.ProcModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ProcWorkCenter.ProcModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.ProcWorkCenter.ProcWorkCenterModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.TradeInfo.TradeAttInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.TradeInfo.TradeEmpModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.TradeInfo.TradeInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.TradeLocInfo.TradeInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.TradeLocInfo.TradeLocInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.WhLocInfo.LocModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.WhLocInfo.WhModel1.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.UserInfo.UserInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MI.WorkCenterInfo.WorkCenterInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirClose.CalenModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirClose.CloseDateModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirClose.CloseDetailModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirClose.CloseHeaderModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirClose.CloseLocModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirClose.CloseWhModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirHist.GirHistModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirLocStock.LocGirModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirLocStock.LocHuModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirLocStock.LocStockModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirStock.GirModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirStock.StockModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.GirStock.WhHuModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.HumHuMaster.HuModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.HumLocInfo.HumLocInfoModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.MovDoc.MovHuModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.MovDoc.MovItemModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.MovDocConfirm.MovDocModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.PurInbound.InDetailModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.PurInbound.InHeaderModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.PurInbound.InHuModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.MM.PurInboundHist.PurInboundHistModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.PC.WoeResult.WoeHuModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.PC.WoeResult.WoeOrderMaterialModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.PC.WoeResult.WoeParentHuModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.PC.WoeResult.WoeUsedMaterialModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.PC.WoeResult.WoeWorkOrderModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.PC.WoeResult.WoeWorkResultModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.PC.WorWorkOrder.WorkOrderDetailModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.PC.WorWorkOrder.WorkOrderHeaderModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.PC.WorWorkOrder.WorkOrderMaterialModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.QC.QchFmlRead.QchFmlReadDetailModel.datasource" />
+    <None Include="Properties\DataSources\BPack.Model.App.QC.QchFmlRead.QchFmlReadHeaderModel.datasource" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
